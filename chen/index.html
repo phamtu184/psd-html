@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <!-- navbar -->
+    <header
+      id="navbar"
+      class="z-30 bg-white text-gray-700 shadow-lg shadow-lg align-middle items-center fixed top-0 left-0 w-full"
+    >
+      <div class="container px-4 flex items-center">
+        <div class="float-left">
+          <img class="h-16" src="./image/logo.jpeg" />
+        </div>
+        <div
+          class="uppercase font-bold text-sm ml-auto space-x-1 hidden md:block sm:hidden"
+        >
+          <a
+            href="#introduce"
+            class="px-10 py-2 btn-nav rounded bg-transparent transition-colors duration-500"
+            >giới thiệu
+          </a>
+          <a
+            href="#product"
+            class="px-10 py-2 btn-nav rounded bg-transparent transition-colors duration-500"
+            >sản phẩm</a
+          >
+          <a
+            href="#support"
+            class="px-10 py-2 btn-nav rounded bg-transparent transition-colors duration-500"
+            >hổ trợ khách hàng</a
+          >
+          <a
+            href="#contact"
+            class="px-10 py-2 btn-nav rounded bg-transparent transition-colors duration-500"
+            >liên hệ</a
+          >
+        </div>
+        <div class="inline-block md:ml-0 ml-auto flex items-center">
+          <img class="h-5 cursor-pointer" src="./image/vietnam.png" />
+          <img class="h-5 cursor-pointer mr-2" src="./image/south-korea.png" />
+          <button
+            onclick="toggleClass()"
+            id="mobile-navigation-btn"
+            class="block ml-auto md:hidden sm:block rounded px-3 py-2 bg-white border text-gray-800 focus:outline-none border-gray-800 hover:text-purple-500 hover:border-purple-500"
+          >
+            <svg
+              class="fill-current h-3 w-3"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <nav
+        id="navigation"
+        class="flex flex-col uppercase container md:hidden duration-500 ease-in-out h-0 w-full overflow-hidden"
+      >
+        <a
+          href="#introduce"
+          class="px-1 py-1 ml-2 btn-nav rounded bg-transparent transition-colors duration-500 hover:text-blue-600 hover:underline"
+          >giới thiệu</a
+        >
+        <a
+          href="#product"
+          class="px-1 py-1 ml-2 btn-nav rounded bg-transparent transition-colors duration-500 hover:text-blue-600 hover:underline"
+          >sản phẩm</a
+        >
+        <a
+          href="#support"
+          class="px-1 py-1 ml-2 btn-nav rounded bg-transparent transition-colors duration-500 hover:text-blue-600 hover:underline"
+          >hổ trợ khách hàng</a
+        >
+        <a
+          href="#contact"
+          class="px-1 py-1 ml-2 btn-nav rounded bg-transparent transition-colors duration-500 hover:text-blue-600 hover:underline"
+          >liên hệ</a
+        >
+      </nav>
+    </header>
+<!-- banner1 -->
+    <section class="jumptarget">
+      <div
+        class="bg-cover bg-center w-full"
+        style="background-image: url(./image/banner1.jpg); height: 80vh;"
+      >
+        <div class="container pt-40" >
+          <h2 class="text-right whitespace-pre-line text-yellow-600 uppercase text-5xl">đồ dùng trên bàn
+            bằng hợp kim</h2>
+          <p class="text-right whitespace-pre-line text-gray-800 italic text-xl">
+            Một bộ đồ ăn chất lượng cao, dễ sử dụng,
+            sạch sẽ và nhẹ nhàng hơn hữu cơ
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="jumptarget px-4 py-4 border-b-2 border-gray-300 pb-16">
+      <div class="mx-auto" style="width: 400px;">
+        <h2 class="text-center font-semibold text-gray-700 uppercase text-3xl">lí do chọn bộ bát chén titan trở nên đặc biệt</h2>
+      </div>
+      <div class="container flex flex-col md:flex-row mt-10">
+        <div class="flex flex-col items-center justify-center p-4 md:w-4/12">
+          <div class="h-32 w-32 bg-cover bg-center rounded-tr-lg rounded-bl-lg" style="background-image: url(./image/product1.jpg);">
+            <span class="px-1 rounded-full bg-white">1</span>
+          </div>
+          <h3 class="text-yellow-600 font-semibold my-4">Cấu trúc chân không không gỉ 2 lớp</h3>
+          <p class="italic">Bằng cấu trúc chân không không gỉ 2 lớp nên có độ dày cao cấp và rất thực dụng</p>
+        </div>
+
+        <div class="flex flex-col items-center justify-center p-4 md:w-4/12">
+          <div class="h-32 w-32 bg-cover bg-center rounded-tr-lg rounded-bl-lg" style="background-image: url(./image/product1.jpg);">
+            <span class="px-1 rounded-full bg-white">1</span>
+          </div>
+          <h3 class="text-yellow-600 font-semibold my-4">Cấu trúc chân không không gỉ 2 lớp</h3>
+          <p class="italic">Bằng cấu trúc chân không không gỉ 2 lớp nên có độ dày cao cấp và rất thực dụng</p>
+        </div>
+
+        <div class="flex flex-col items-center justify-center p-4 md:w-4/12">
+          <div class="h-32 w-32 bg-cover bg-center rounded-tr-lg rounded-bl-lg" style="background-image: url(./image/product1.jpg);">
+            <span class="px-1 rounded-full bg-white">1</span>
+          </div>
+          <h3 class="text-yellow-600 font-semibold my-4">Cấu trúc chân không không gỉ 2 lớp</h3>
+          <p class="italic">Bằng cấu trúc chân không không gỉ 2 lớp nên có độ dày cao cấp và rất thực dụng</p>
+        </div>
+
+        <div class="flex flex-col items-center justify-center p-4 md:w-4/12">
+          <div class="h-32 w-32 bg-cover bg-center rounded-tr-lg rounded-bl-lg" style="background-image: url(./image/product1.jpg);">
+            <span class="px-1 rounded-full bg-white">1</span>
+          </div>
+          <h3 class="text-yellow-600 font-semibold my-4">Cấu trúc chân không không gỉ 2 lớp</h3>
+          <p class="italic">Bằng cấu trúc chân không không gỉ 2 lớp nên có độ dày cao cấp và rất thực dụng</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="introduce" class="jumptarget">
+      <div class="p-4">
+        <h2 class="container uppercase font-semibold text-gray-700 text-3xl">lời ngỏ</h2>
+        <div class="container flex flex-col md:flex-row ">
+          <div class="md:w-1/2 pr-4">
+            <p class="mt-8">
+              Safama có mặt tại Tp.Hồ Chí Minh - phía nam Việt Vam, là Công ty MRO chuyên nghiệp đang phân phối các sản phẩm tiêu hao ngành sản xuất, khởi nghiệp từ năm 1994.
+            </p>
+            <p class="my-8">
+              Safama có mặt tại Tp.Hồ Chí Minh - phía nam Việt Vam, là Công ty MRO chuyên nghiệp đang phân phối các sản phẩm tiêu hao ngành sản xuất, khởi nghiệp từ năm 1994.
+            </p>
+            <p>
+              Safama có mặt tại Tp.Hồ Chí Minh - phía nam Việt Vam, là Công ty MRO chuyên nghiệp đang phân phối các sản phẩm tiêu hao ngành sản xuất, khởi nghiệp từ năm 1994.
+            </p>
+          </div>
+          <div class="md:w-1/2">
+            <img class="w-full" style="-webkit-mask-image: -webkit-gradient(linear, left 10%, left top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))" src="./image/adress.jpg"/>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+
+    <section class="jumptarget">
+      <div class="bg-cover bg-center w-full text-white relative overlay" style="background-image: url(./image/banner2.jpg);">
+        <h2 class="mt-10 uppercase text-center font-semibold text-3xl mb-4 pt-12">Lưu ý trước khi sử dụng</h2>
+        <div class="flex flex-wrap container pb-12">
+          <div class="md:w-1/3 flex justify-center pt-6">
+            <div>
+              <span class="checkmark mt-2">
+                <div class="checkmark_circle bg-yellow-700"></div>
+                <div class="checkmark_stem bg-gray-700"></div>
+                <div class="checkmark_kick bg-gray-700"></div>
+              </span>
+            </div>
+            <p class="ml-4">Trước khi sử dụng hãy rửa sạch rồi mới dùng. khi rửa lần đầu sẽ có trường hợp vết bẩn bị vẩy ra nhưng chỉ cần rửa sạch rồi sử dụng là được</p>
+          </div>
+          <div class="md:w-1/3 flex justify-center pt-6">
+            <div>
+              <span class="checkmark mt-2">
+                <div class="checkmark_circle bg-yellow-700"></div>
+                <div class="checkmark_stem bg-gray-700"></div>
+                <div class="checkmark_kick bg-gray-700"></div>
+              </span>
+            </div>
+            <p class="ml-4">Trước khi sử dụng hãy rửa sạch rồi mới dùng. khi rửa lần đầu sẽ có trường hợp vết bẩn bị vẩy ra nhưng chỉ cần rửa sạch rồi sử dụng là được2</p>
+          </div>
+          <div class="md:w-1/3 flex justify-center pt-6">
+            <div>
+              <span class="checkmark mt-2">
+                <div class="checkmark_circle bg-yellow-700"></div>
+                <div class="checkmark_stem bg-gray-700"></div>
+                <div class="checkmark_kick bg-gray-700"></div>
+              </span>
+            </div>
+            <p class="ml-4">Trước khi sử dụng hãy rửa sạch rồi mới dùng. khi rửa lần đầu sẽ có trường hợp vết bẩn bị vẩy ra nhưng chỉ cần rửa sạch rồi sử dụng là được3</p>
+          </div>
+          <div class="md:w-1/3 flex justify-center pt-6">
+            <div>
+              <span class="checkmark mt-2">
+                <div class="checkmark_circle bg-yellow-700"></div>
+                <div class="checkmark_stem bg-gray-700"></div>
+                <div class="checkmark_kick bg-gray-700"></div>
+              </span>
+            </div>
+            <p class="ml-4">Trước khi sử dụng hãy rửa sạch rồi mới dùng. khi rửa lần đầu sẽ có trường hợp vết bẩn bị vẩy ra nhưng chỉ cần rửa sạch rồi sử dụng là được4</p>
+          </div>
+          <div class="md:w-1/3 flex justify-center pt-6">
+            <div>
+              <span class="checkmark mt-2">
+                <div class="checkmark_circle bg-yellow-700"></div>
+                <div class="checkmark_stem bg-gray-700"></div>
+                <div class="checkmark_kick bg-gray-700"></div>
+              </span>
+            </div>
+            <p class="ml-4">Trước khi sử dụng hãy rửa sạch rồi mới dùng. khi rửa lần đầu sẽ có trường hợp vết bẩn bị vẩy ra nhưng chỉ cần rửa sạch rồi sử dụng là được5</p>
+          </div>
+          <div class="md:w-1/3 flex justify-center pt-6">
+            <div>
+              <span class="checkmark mt-2">
+                <div class="checkmark_circle bg-yellow-700"></div>
+                <div class="checkmark_stem bg-gray-700"></div>
+                <div class="checkmark_kick bg-gray-700"></div>
+              </span>
+            </div>
+            <p class="ml-4">Trước khi sử dụng hãy rửa sạch rồi mới dùng. khi rửa lần đầu sẽ có trường hợp vết bẩn bị vẩy ra nhưng chỉ cần rửa sạch rồi sử dụng là được6</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="jumptarget">
+      <div class="container">
+        <div class="mx-auto md:w-2/6">
+          <h2 class="mt-10 text-center uppercase font-semibold text-3xl mb-4 text-gray-700 mb-20">ưu điểm bộ đồ ăn bằng hợp kim titanium</h2>
+        </div>
+        <div class="container flex flex-col md:flex-row ">
+          <div class="md:w-1/2">
+            <img class="w-full" style="-webkit-mask-image: -webkit-gradient(linear, left 10%, left top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))" src="./image/banner3.jpg"/>
+          </div>
+          <div class="md:w-1/2 md:-mt-8">
+            <div class="flex">
+              <span class="mx-6 font-bold text-yellow-600 text-3xl">1</span>
+              <p class="mt-4">Titanium chủ yếu được sử dụng trong ngành công nghiệp có giá trị gia tăng cao như hàng linh tinh cao cấp(phụ kiện phòng chống dị ứng/đồng hồ) câu lạc bộ goft / cấy ghép / ngành hàng không vũ trụ / thiết bị y tế.</p>
+            </div>
+            <div class="flex mt-4">
+              <span class="mx-6 font-bold text-yellow-600 text-3xl">2</span>
+              <p class="mt-4">Titanium chủ yếu được sử dụng trong ngành công nghiệp có giá trị gia tăng cao như hàng linh tinh cao cấp(phụ kiện phòng chống dị ứng/đồng hồ) câu lạc bộ goft / cấy ghép / ngành hàng không vũ trụ / thiết bị y tế.</p>
+            </div>
+            <div class="flex mt-4">
+              <span class="mx-6 font-bold text-yellow-600 text-3xl">3</span>
+              <p class="mt-4">Titanium chủ yếu được sử dụng trong ngành công nghiệp có giá trị gia tăng cao như hàng linh tinh cao cấp(phụ kiện phòng chống dị ứng/đồng hồ) câu lạc bộ goft / cấy ghép / ngành hàng không vũ trụ / thiết bị y tế.</p>
+            </div>
+            <div class="flex mt-4">
+              <span class="mx-6 font-bold text-yellow-600 text-3xl">4</span>
+              <p class="mt-4">Titanium chủ yếu được sử dụng trong ngành công nghiệp có giá trị gia tăng cao như hàng linh tinh cao cấp(phụ kiện phòng chống dị ứng/đồng hồ) câu lạc bộ goft / cấy ghép / ngành hàng không vũ trụ / thiết bị y tế.</p>
+            </div>
+            <div class="flex mt-4">
+              <span class="mx-6 font-bold text-yellow-600 text-3xl">5</span>
+              <p class="mt-4">Titanium chủ yếu được sử dụng trong ngành công nghiệp có giá trị gia tăng cao như hàng linh tinh cao cấp(phụ kiện phòng chống dị ứng/đồng hồ) câu lạc bộ goft / cấy ghép / ngành hàng không vũ trụ / thiết bị y tế.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="product" class="jumptarget">
+      <div class="bg-blue-100 py-10">
+        <div style="width: 400px;" class="mx-auto">
+          <h2 class="mt-10 text-center uppercase font-semibold text-3xl mb-4 text-gray-700 mb-20">sản phẩm bộ đồ ăn bằng hợp kim titanium</h2>
+        </div>
+        <div class="flex flex-wrap">
+          <div class="md:w-1/2 p-3">
+            <div class="p-6 bg-white">
+              <h2 class="uppercase font-semibold text-yellow-600 text-3xl text-center">bát soup</h2>
+              <p class="text-center mt-8">Là một bộ đồ ăn bằng titan chủ yếu được sử dụng trong thực phẩm cao cấp của Hàn Quốc. Thiết kế sạch sẽ và thanh lịch là bộ đồ ăn có cấu trúc kép với độ bền cao và tuyệt vời. nó có trọng lượng nhẹ và độ bền mạnh, và bát không nóng nên dễ dàng ngay cả khi nó chứa đồ ăn nóng so với bát bằng đất nung(đồng thau) giá thấp.</p>
+              <div class="flex mt-10">
+                <div class="w-1/2">
+                  <div class="w-1/2 mx-auto"><img src="./image/product2.jpg"/></div>
+                  <div>
+                    <table class="table-auto mx-auto">
+                      <thead>
+                        <tr>
+                          <th class="">Size/cm</th>
+                          <th class="">VND</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="border ">10.5 x 5.3</td>
+                          <td class="border ">210.000</td>
+                        </tr>
+                        <tr>
+                          <td class="border ">14.0 x 5.7</td>
+                          <td class="border ">325.000</td>
+                        </tr>
+                        <tr>
+                          <td class="border ">17.0 x 7.7</td>
+                          <td class="border ">400.000</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="w-1/2">
+                  <div class="flex flex-wrap">
+                    <div class="w-1/2">
+                      <img class="rounded-tl-lg" src="./image/product3.jpg"/>
+                    </div>
+                    <div class="w-1/2">
+                      <img class="rounded-tr-lg" src="./image/product3.jpg"/>
+                    </div>
+                    <div class="w-1/2">
+                      <img class="rounded-bl-lg" src="./image/product3.jpg"/>
+                    </div>
+                    <div class="w-1/2">
+                      <img class="rounded-br-lg" src="./image/product3.jpg"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="md:w-1/2 p-3">
+            <div class="p-6 bg-white">
+              <h2 class="uppercase font-semibold text-yellow-600 text-3xl text-center">bát soup</h2>
+              <p class="text-center mt-8">Là một bộ đồ ăn bằng titan chủ yếu được sử dụng trong thực phẩm cao cấp của Hàn Quốc. Thiết kế sạch sẽ và thanh lịch là bộ đồ ăn có cấu trúc kép với độ bền cao và tuyệt vời. nó có trọng lượng nhẹ và độ bền mạnh, và bát không nóng nên dễ dàng ngay cả khi nó chứa đồ ăn nóng so với bát bằng đất nung(đồng thau) giá thấp.</p>
+              <div class="flex mt-10">
+                <div class="w-1/2">
+                  <div class="w-1/2 mx-auto"><img src="./image/product2.jpg"/></div>
+                  <div>
+                    <table class="table-auto mx-auto">
+                      <thead>
+                        <tr>
+                          <th class="">Size/cm</th>
+                          <th class="">VND</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="border ">10.5 x 5.3</td>
+                          <td class="border ">210.000</td>
+                        </tr>
+                        <tr>
+                          <td class="border ">14.0 x 5.7</td>
+                          <td class="border ">325.000</td>
+                        </tr>
+                        <tr>
+                          <td class="border ">17.0 x 7.7</td>
+                          <td class="border ">400.000</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="w-1/2">
+                  <div class="flex flex-wrap">
+                    <div class="w-1/2">
+                      <img class="rounded-tl-lg" src="./image/product3.jpg"/>
+                    </div>
+                    <div class="w-1/2">
+                      <img class="rounded-tr-lg" src="./image/product3.jpg"/>
+                    </div>
+                    <div class="w-1/2">
+                      <img class="rounded-bl-lg" src="./image/product3.jpg"/>
+                    </div>
+                    <div class="w-1/2">
+                      <img class="rounded-br-lg" src="./image/product3.jpg"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="md:w-1/2 p-3">
+            <div class="p-6 bg-white">
+              <h2 class="uppercase font-semibold text-yellow-600 text-3xl text-center">bát soup</h2>
+              <p class="text-center mt-8">Là một bộ đồ ăn bằng titan chủ yếu được sử dụng trong thực phẩm cao cấp của Hàn Quốc. Thiết kế sạch sẽ và thanh lịch là bộ đồ ăn có cấu trúc kép với độ bền cao và tuyệt vời. nó có trọng lượng nhẹ và độ bền mạnh, và bát không nóng nên dễ dàng ngay cả khi nó chứa đồ ăn nóng so với bát bằng đất nung(đồng thau) giá thấp.</p>
+              <div class="flex mt-10">
+                <div class="w-1/2">
+                  <div class="w-1/2 mx-auto"><img src="./image/product2.jpg"/></div>
+                  <div>
+                    <table class="table-auto mx-auto">
+                      <thead>
+                        <tr>
+                          <th class="">Size/cm</th>
+                          <th class="">VND</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="border ">10.5 x 5.3</td>
+                          <td class="border ">210.000</td>
+                        </tr>
+                        <tr>
+                          <td class="border ">14.0 x 5.7</td>
+                          <td class="border ">325.000</td>
+                        </tr>
+                        <tr>
+                          <td class="border ">17.0 x 7.7</td>
+                          <td class="border ">400.000</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="w-1/2">
+                  <div class="flex flex-wrap">
+                    <div class="w-1/2">
+                      <img class="rounded-tl-lg" src="./image/product3.jpg"/>
+                    </div>
+                    <div class="w-1/2">
+                      <img class="rounded-tr-lg" src="./image/product3.jpg"/>
+                    </div>
+                    <div class="w-1/2">
+                      <img class="rounded-bl-lg" src="./image/product3.jpg"/>
+                    </div>
+                    <div class="w-1/2">
+                      <img class="rounded-br-lg" src="./image/product3.jpg"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="md:w-1/2 p-3">
+            <div class="p-6 bg-white">
+              <h2 class="uppercase font-semibold text-yellow-600 text-3xl text-center">bát soup</h2>
+              <p class="text-center mt-8">Là một bộ đồ ăn bằng titan chủ yếu được sử dụng trong thực phẩm cao cấp của Hàn Quốc. Thiết kế sạch sẽ và thanh lịch là bộ đồ ăn có cấu trúc kép với độ bền cao và tuyệt vời. nó có trọng lượng nhẹ và độ bền mạnh, và bát không nóng nên dễ dàng ngay cả khi nó chứa đồ ăn nóng so với bát bằng đất nung(đồng thau) giá thấp.</p>
+              <div class="flex mt-10">
+                <div class="w-1/2">
+                  <div class="w-1/2 mx-auto"><img src="./image/product2.jpg"/></div>
+                  <div>
+                    <table class="table-auto mx-auto">
+                      <thead>
+                        <tr>
+                          <th class="">Size/cm</th>
+                          <th class="">VND</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="border ">10.5 x 5.3</td>
+                          <td class="border ">210.000</td>
+                        </tr>
+                        <tr>
+                          <td class="border ">14.0 x 5.7</td>
+                          <td class="border ">325.000</td>
+                        </tr>
+                        <tr>
+                          <td class="border ">17.0 x 7.7</td>
+                          <td class="border ">400.000</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="w-1/2">
+                  <div class="flex flex-wrap">
+                    <div class="w-1/2">
+                      <img class="rounded-tl-lg" src="./image/product3.jpg"/>
+                    </div>
+                    <div class="w-1/2">
+                      <img class="rounded-tr-lg" src="./image/product3.jpg"/>
+                    </div>
+                    <div class="w-1/2">
+                      <img class="rounded-bl-lg" src="./image/product3.jpg"/>
+                    </div>
+                    <div class="w-1/2">
+                      <img class="rounded-br-lg" src="./image/product3.jpg"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="md:w-1/2 p-3">
+            <div class="p-6 bg-white">
+              <h2 class="uppercase font-semibold text-yellow-600 text-3xl text-center">bát soup</h2>
+              <p class="text-center mt-8">Là một bộ đồ ăn bằng titan chủ yếu được sử dụng trong thực phẩm cao cấp của Hàn Quốc. Thiết kế sạch sẽ và thanh lịch là bộ đồ ăn có cấu trúc kép với độ bền cao và tuyệt vời. nó có trọng lượng nhẹ và độ bền mạnh, và bát không nóng nên dễ dàng ngay cả khi nó chứa đồ ăn nóng so với bát bằng đất nung(đồng thau) giá thấp.</p>
+              <div class="flex mt-10">
+                <div class="w-1/2">
+                  <div class="w-1/2 mx-auto"><img src="./image/product2.jpg"/></div>
+                  <div>
+                    <table class="table-auto mx-auto">
+                      <thead>
+                        <tr>
+                          <th class="">Size/cm</th>
+                          <th class="">VND</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="border ">10.5 x 5.3</td>
+                          <td class="border ">210.000</td>
+                        </tr>
+                        <tr>
+                          <td class="border ">14.0 x 5.7</td>
+                          <td class="border ">325.000</td>
+                        </tr>
+                        <tr>
+                          <td class="border ">17.0 x 7.7</td>
+                          <td class="border ">400.000</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="w-1/2">
+                  <div class="flex flex-wrap">
+                    <div class="w-1/2">
+                      <img class="rounded-tl-lg" src="./image/product3.jpg"/>
+                    </div>
+                    <div class="w-1/2">
+                      <img class="rounded-tr-lg" src="./image/product3.jpg"/>
+                    </div>
+                    <div class="w-1/2">
+                      <img class="rounded-bl-lg" src="./image/product3.jpg"/>
+                    </div>
+                    <div class="w-1/2">
+                      <img class="rounded-br-lg" src="./image/product3.jpg"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="md:w-1/2 p-3">
+            <div class="p-6 bg-white">
+              <h2 class="uppercase font-semibold text-yellow-600 text-3xl text-center">bát soup</h2>
+              <p class="text-center mt-8">Là một bộ đồ ăn bằng titan chủ yếu được sử dụng trong thực phẩm cao cấp của Hàn Quốc. Thiết kế sạch sẽ và thanh lịch là bộ đồ ăn có cấu trúc kép với độ bền cao và tuyệt vời. nó có trọng lượng nhẹ và độ bền mạnh, và bát không nóng nên dễ dàng ngay cả khi nó chứa đồ ăn nóng so với bát bằng đất nung(đồng thau) giá thấp.</p>
+              <div class="flex mt-10">
+                <div class="w-1/2">
+                  <div class="w-1/2 mx-auto"><img src="./image/product2.jpg"/></div>
+                  <div>
+                    <table class="table-auto mx-auto">
+                      <thead>
+                        <tr>
+                          <th class="">Size/cm</th>
+                          <th class="">VND</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="border ">10.5 x 5.3</td>
+                          <td class="border ">210.000</td>
+                        </tr>
+                        <tr>
+                          <td class="border ">14.0 x 5.7</td>
+                          <td class="border ">325.000</td>
+                        </tr>
+                        <tr>
+                          <td class="border ">17.0 x 7.7</td>
+                          <td class="border ">400.000</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="w-1/2">
+                  <div class="flex flex-wrap">
+                    <div class="w-1/2">
+                      <img class="rounded-tl-lg" src="./image/product3.jpg"/>
+                    </div>
+                    <div class="w-1/2">
+                      <img class="rounded-tr-lg" src="./image/product3.jpg"/>
+                    </div>
+                    <div class="w-1/2">
+                      <img class="rounded-bl-lg" src="./image/product3.jpg"/>
+                    </div>
+                    <div class="w-1/2">
+                      <img class="rounded-br-lg" src="./image/product3.jpg"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="md:w-1/2 p-3">
+            <div class="p-6 bg-white">
+              <h2 class="uppercase font-semibold text-yellow-600 text-3xl text-center">bát soup</h2>
+              <p class="text-center mt-8">Là một bộ đồ ăn bằng titan chủ yếu được sử dụng trong thực phẩm cao cấp của Hàn Quốc. Thiết kế sạch sẽ và thanh lịch là bộ đồ ăn có cấu trúc kép với độ bền cao và tuyệt vời. nó có trọng lượng nhẹ và độ bền mạnh, và bát không nóng nên dễ dàng ngay cả khi nó chứa đồ ăn nóng so với bát bằng đất nung(đồng thau) giá thấp.</p>
+              <div class="flex mt-10">
+                <div class="w-1/2">
+                  <div class="w-1/2 mx-auto"><img src="./image/product2.jpg"/></div>
+                  <div>
+                    <table class="table-auto mx-auto">
+                      <thead>
+                        <tr>
+                          <th class="">Size/cm</th>
+                          <th class="">VND</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="border ">10.5 x 5.3</td>
+                          <td class="border ">210.000</td>
+                        </tr>
+                        <tr>
+                          <td class="border ">14.0 x 5.7</td>
+                          <td class="border ">325.000</td>
+                        </tr>
+                        <tr>
+                          <td class="border ">17.0 x 7.7</td>
+                          <td class="border ">400.000</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="w-1/2">
+                  <div class="flex flex-wrap">
+                    <div class="w-1/2">
+                      <img class="rounded-tl-lg" src="./image/product3.jpg"/>
+                    </div>
+                    <div class="w-1/2">
+                      <img class="rounded-tr-lg" src="./image/product3.jpg"/>
+                    </div>
+                    <div class="w-1/2">
+                      <img class="rounded-bl-lg" src="./image/product3.jpg"/>
+                    </div>
+                    <div class="w-1/2">
+                      <img class="rounded-br-lg" src="./image/product3.jpg"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="md:w-1/2 p-3">
+            <div class="p-6 bg-white">
+              <h2 class="uppercase font-semibold text-yellow-600 text-3xl text-center">bát soup</h2>
+              <p class="text-center mt-8">Là một bộ đồ ăn bằng titan chủ yếu được sử dụng trong thực phẩm cao cấp của Hàn Quốc. Thiết kế sạch sẽ và thanh lịch là bộ đồ ăn có cấu trúc kép với độ bền cao và tuyệt vời. nó có trọng lượng nhẹ và độ bền mạnh, và bát không nóng nên dễ dàng ngay cả khi nó chứa đồ ăn nóng so với bát bằng đất nung(đồng thau) giá thấp.</p>
+              <div class="flex mt-10">
+                <div class="w-1/2">
+                  <div class="w-1/2 mx-auto"><img src="./image/product2.jpg"/></div>
+                  <div>
+                    <table class="table-auto mx-auto">
+                      <thead>
+                        <tr>
+                          <th class="">Size/cm</th>
+                          <th class="">VND</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="border ">10.5 x 5.3</td>
+                          <td class="border ">210.000</td>
+                        </tr>
+                        <tr>
+                          <td class="border ">14.0 x 5.7</td>
+                          <td class="border ">325.000</td>
+                        </tr>
+                        <tr>
+                          <td class="border ">17.0 x 7.7</td>
+                          <td class="border ">400.000</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="w-1/2">
+                  <div class="flex flex-wrap">
+                    <div class="w-1/2">
+                      <img class="rounded-tl-lg" src="./image/product3.jpg"/>
+                    </div>
+                    <div class="w-1/2">
+                      <img class="rounded-tr-lg" src="./image/product3.jpg"/>
+                    </div>
+                    <div class="w-1/2">
+                      <img class="rounded-bl-lg" src="./image/product3.jpg"/>
+                    </div>
+                    <div class="w-1/2">
+                      <img class="rounded-br-lg" src="./image/product3.jpg"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="support" class="jumptarget" style="margin: -180px 0 0 ;">
+      <div class="bg-cover bg-center w-full text-white relative overlay pb-10" style="background-image: url(./image/banner2.jpg);">
+        <h2 class="mt-10 uppercase text-center font-semibold text-3xl mb-4 pt-12">Vui lòng kiểm tra sản phẩm</h2>
+        <div class="mx-auto md:w-2/5">
+          <h3 class="text-center mb-4">Các mục sau đây là hiện tượng tự nhiên có thể xảy ra trong quá trình sản xuất và không tạo thành khuyết tật và do đó không gây ra sự thây thế hoặc trả lại. Vui lòng kiểm tra trước khi mua.</h3>
+        </div>
+        <div class="container flex flex-wrap">
+          <div class="md:w-1/4 w-1/2 flex flex-col items-center my-4">
+            <img class="rounded-full h-32 w-32" src="./image/riskproduct1.jpg"/>
+            <p class="mt-4">Dấu vết cháy</p>
+          </div>
+          <div class="md:w-1/4 w-1/2 flex flex-col items-center my-4">
+            <img class="rounded-full h-32 w-32" src="./image/riskproduct1.jpg"/>
+            <p class="mt-4">Dấu vết cháy</p>
+          </div>
+          <div class="md:w-1/4 w-1/2 flex flex-col items-center my-4">
+            <img class="rounded-full h-32 w-32" src="./image/riskproduct1.jpg"/>
+            <p class="mt-4">Dấu vết cháy</p>
+          </div>
+          <div class="md:w-1/4 w-1/2 flex flex-col items-center my-4">
+            <img class="rounded-full h-32 w-32" src="./image/riskproduct1.jpg"/>
+            <p class="mt-4">Dấu vết cháy</p>
+          </div>
+          <div class="md:w-1/4 w-1/2 flex flex-col items-center my-4">
+            <img class="rounded-full h-32 w-32" src="./image/riskproduct1.jpg"/>
+            <p class="mt-4">Dấu vết cháy</p>
+          </div>
+          <div class="md:w-1/4 w-1/2 flex flex-col items-center my-4">
+            <img class="rounded-full h-32 w-32" src="./image/riskproduct1.jpg"/>
+            <p class="mt-4">Dấu vết cháy</p>
+          </div>
+          <div class="md:w-1/4 w-1/2 flex flex-col items-center my-4">
+            <img class="rounded-full h-32 w-32" src="./image/riskproduct1.jpg"/>
+            <p class="mt-4">Dấu vết cháy</p>
+          </div>
+          <div class="md:w-1/4 w-1/2 flex flex-col items-center my-4">
+            <img class="rounded-full h-32 w-32" src="./image/riskproduct1.jpg"/>
+            <p class="mt-4">Dấu vết cháy</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="jumptarget text-gray-700">
+      <div class='w-full'>
+        <h2 class="uppercase text-center font-semibold text-3xl mb-4">Vui lòng kiểm tra sản phẩm</h2>
+        <div class="mx-auto md:w-2/5">
+          <h3 class="text-center mb-4">Các mục sau đây là hiện tượng tự nhiên có thể xảy ra trong quá trình sản xuất và không tạo thành khuyết tật và do đó không gây ra sự thây thế hoặc trả lại. Vui lòng kiểm tra trước khi mua.</h3>
+        </div>
+      </div>
+      <div class="container mt-10">
+        <div class="flex flex-wrap">
+          <div class="md:w-1/3 px-4">
+            <div class="flex items-center">
+              <div class="rounded-full h-10 w-10 border flex items-center justify-center border-yellow-600 mr-3">
+                <span class="font-bold text-3xl text-yellow-600">1</span>
+              </div>
+              <h3 class="font-semibold text-xl uppercase">Lưu ý khi đặt hàng</h3>
+            </div>
+            <p class="py-3">-Hạn chót là trước 4 giờ chiều và giao hang mất 4-5 ngày sau khi thanh toán được xác nhận.(Không bao gồm cuối tuần và ngày lễ).</p>
+            <p class="py-3">-Hạn chót là trước 4 giờ chiều và giao hang mất 4-5 ngày sau khi thanh toán được xác nhận.(Không bao gồm cuối tuần và ngày lễ).</p>
+            <p class="py-3">-Hạn chót là trước 4 giờ chiều và giao hang mất 4-5 ngày sau khi thanh toán được xác nhận.(Không bao gồm cuối tuần và ngày lễ).</p>
+          </div>
+          <div class="md:w-1/3 px-4">
+            <div class="flex items-center">
+              <div class="rounded-full h-10 w-10 border flex items-center justify-center border-yellow-600 mr-3">
+                <span class="font-bold text-3xl text-yellow-600">2</span>
+              </div>
+              <h3 class="font-semibold text-xl uppercase">Lưu ý khi đặt hàng</h3>
+            </div>
+            <p class="py-3">-Hạn chót là trước 4 giờ chiều và giao hang mất 4-5 ngày sau khi thanh toán được xác nhận.(Không bao gồm cuối tuần và ngày lễ).</p>
+            <p class="py-3">-Hạn chót là trước 4 giờ chiều và giao hang mất 4-5 ngày sau khi thanh toán được xác nhận.(Không bao gồm cuối tuần và ngày lễ).</p>
+            <p class="py-3">-Hạn chót là trước 4 giờ chiều và giao hang mất 4-5 ngày sau khi thanh toán được xác nhận.(Không bao gồm cuối tuần và ngày lễ).</p>
+          </div>
+          <div class="md:w-1/3 px-4">
+            <div class="flex items-center">
+              <div class="rounded-full h-10 w-10 border flex items-center justify-center border-yellow-600 mr-3">
+                <span class="font-bold text-3xl text-yellow-600">3</span>
+              </div>
+              <h3 class="font-semibold text-xl uppercase">Lưu ý khi đặt hàng</h3>
+            </div>
+            <p class="py-3">-Hạn chót là trước 4 giờ chiều và giao hang mất 4-5 ngày sau khi thanh toán được xác nhận.(Không bao gồm cuối tuần và ngày lễ).</p>
+            <p class="py-3">-Hạn chót là trước 4 giờ chiều và giao hang mất 4-5 ngày sau khi thanh toán được xác nhận.(Không bao gồm cuối tuần và ngày lễ).</p>
+            <p class="py-3">-Hạn chót là trước 4 giờ chiều và giao hang mất 4-5 ngày sau khi thanh toán được xác nhận.(Không bao gồm cuối tuần và ngày lễ).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="jumptarget">
+      <div class="bg-orange-100 text-gray-700 py-16 px-10">
+        <div class="mx-auto md:w-1/5">
+          <h2 class="uppercase text-center font-semibold text-3xl mb-4">Gửi yêu cầu hoàn trả đổi hàng</h2>
+        </div>
+        <div class="mx-auto md:w-2/5">
+          <h3 class="text-center mb-4">Nếu bạn muốn trao đổi hoặc hoàn tiền, vui lòng điền phiếu điều tra bên dưới.</h3>
+        </div>
+        <div class="container mt-10">
+          <div class="flex flex-wrap">
+            <div class="md:w-1/3 w-full">
+              <h3 class="uppercase font-semibold text-lg">Thông tin khách hàng</h3>
+              <div>
+                <input
+                  type="text"
+                  class="my-4 w-10/12 p-3 rounded transition-all duration-500 block text-lg bg-white border border-transparent hover:bg-gray-300 hover:border-gray-400 focus:bg-white focus:shadow-outline focus:border-gray-300 focus:outline-none"
+                  name="nguoinhan"
+                  placeholder="Người đặt hàng(người nhận)"
+                  autoComplete="off"
+                />
+                <input
+                  type="text"
+                  class="my-4 w-10/12 p-3 rounded transition-all duration-500 block text-lg bg-white border border-transparent hover:bg-gray-300 hover:border-gray-400 focus:bg-white focus:shadow-outline focus:border-gray-300 focus:outline-none"
+                  name="dt"
+                  placeholder="Điện thoại"
+                  autoComplete="off"
+                />
+                <input
+                  type="text"
+                  class="my-4 w-10/12 p-3 rounded transition-all duration-500 block text-lg bg-white border border-transparent hover:bg-gray-300 hover:border-gray-400 focus:bg-white focus:shadow-outline focus:border-gray-300 focus:outline-none"
+                  name="email"
+                  placeholder="Email"
+                  autoComplete="off"
+                />
+              </div>
+            </div>
+
+            <div class="md:w-1/3 w-full">
+              <h3 class="uppercase font-semibold text-lg">yêu cầu đổi hàng</h3>
+              <div>
+                <select placeholder="Lựa chọn lý do đổi" class="my-4 w-10/12 p-3 rounded transition-all duration-500 block text-lg bg-white border border-transparent hover:bg-gray-300 hover:border-gray-400 focus:bg-white focus:shadow-outline focus:border-gray-300 focus:outline-none">
+                  <option value="" disabled selected>Lựa chọn lý do đổi</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                </select>
+                <input
+                  type="text"
+                  class="my-4 w-10/12 p-3 rounded transition-all duration-500 block text-lg bg-white border border-transparent hover:bg-gray-300 hover:border-gray-400 focus:bg-white focus:shadow-outline focus:border-gray-300 focus:outline-none"
+                  name="tensp"
+                  placeholder="Tên sản phẩm muốn đổi"
+                  autoComplete="off"
+                />
+                <input
+                  type="text"
+                  class="my-4 w-10/12 p-3 rounded transition-all duration-500 block text-lg bg-white border border-transparent hover:bg-gray-300 hover:border-gray-400 focus:bg-white focus:shadow-outline focus:border-gray-300 focus:outline-none"
+                  name="Địa chỉ giao nhận hàng"
+                  placeholder="Email"
+                  autoComplete="off"
+                />
+              </div>
+            </div>
+
+            <div class="md:w-1/3 w-full">
+              <h3 class="uppercase font-semibold text-lg">yêu cầu hoàn trả</h3>
+              <div>
+                <select placeholder="Lựa chọn lý do hoàn trả" class="my-4 w-10/12 p-3 rounded transition-all duration-500 block text-lg bg-white border border-transparent hover:bg-gray-300 hover:border-gray-400 focus:bg-white focus:shadow-outline focus:border-gray-300 focus:outline-none">
+                  <option value="" disabled selected>Lựa chọn lý hoàn trả</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                </select>
+                <input
+                  type="text"
+                  class="my-4 w-10/12 p-3 rounded transition-all duration-500 block text-lg bg-white border border-transparent hover:bg-gray-300 hover:border-gray-400 focus:bg-white focus:shadow-outline focus:border-gray-300 focus:outline-none"
+                  name="hinhthuc"
+                  placeholder="Hình thức hoàn trả tiền"
+                  autoComplete="off"
+                />
+                <input
+                  type="text"
+                  class="my-4 w-10/12 p-3 rounded transition-all duration-500 block text-lg bg-white border border-transparent hover:bg-gray-300 hover:border-gray-400 focus:bg-white focus:shadow-outline focus:border-gray-300 focus:outline-none"
+                  name="nhập thông tin"
+                  placeholder="tt"
+                  autoComplete="off"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="jumptarget" style="margin: -145px 0 0;">
+      <div class="container flex flex-wrap">
+        <div class="md:w-1/2 w-full my-10">
+          <h1 class="font-bold text-orange-600 text-6xl text-center">safama</h1>
+          <div class="font-semibold text-gray-600 text-4xl text-center -mt-4">Titanium<h3 class="text-gray-600 text-xl inline-block ml-3">Table Ware</h3> </div>
+          <div class="table mt-4">
+            <div class="table-row-group">
+              <div class="table-row">
+                <h5 class="table-cell px-4 py-1 text-lg text-orange-600"><i class="fa fa-map-marker"></i></h5>
+                <span class="table-cell px-4 py-1 text-sm"
+                  >9 Hà huy Giáp, P.Thạnh Lộc, Q.12, Tp,HCM</span
+                >
+              </div>
+              <div class="table-row">
+                <h5 class="table-cell px-4 py-1 text-lg text-orange-600"><i class="fa fa-phone"></i></h5>
+                <span class="table-cell px-4 py-1 text-sm">(028) 3716 0331 - 070 7751 4899</span>
+              </div>
+              <div class="table-row">
+                <h5 class="table-cell px-4 py-1 text-lg text-orange-600"><i class="fa fa-phone-square"></i></h5>
+                <span class="table-cell px-4 py-1text-sm"
+                  >Hotline Kinh Doanh: 091 4171 860</span
+                >
+              </div>
+              <div class="table-row">
+                <h5 class="table-cell px-4 py-1 text-lg text-orange-600"><i class="fa fa-envelope-o"></i></h5>
+                <span class="table-cell px-4 py-1 text-sm"
+                  >Safamacom@naver.com</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="flex mt-10 text-gray-700 text-3xl">
+            <i class="fa fa-facebook-official mx-2"></i>
+            <i class="fa fa-twitter mx-2"></i>
+            <i class="fa fa-linkedin mx-2"></i>
+            <i class="fa fa-pinterest mx-2"></i>
+          </div>
+        </div>
+        <div class="md:w-1/2 w-full md:h-auto h-64">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.467968012585!2d106.67619911522176!3d10.851967260761192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175284b122064af%3A0xfe1f4fe2c230d390!2zOSBIw6AgSHV5IEdpw6FwLCBUaOG6oW5oIEzhu5ljLCBRdeG6rW4gMTIsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1596360113223!5m2!1svi!2s" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer class="w-full h-16 bg-gray-600">
+      <div
+        class="center text-white text-base w-full center text-center transform translate-y-5"
+      >
+        Copyright © 2020 - SAFAMA - All Rights Resereved Powered By SmartID
+      </div>
+    </footer>
+  </body>
+  <script>
+    function toggleClass() {
+      var navMb = document.getElementById("navigation");
+      navMb.classList.toggle("h-32");
+    }
+  </script>
+</html>

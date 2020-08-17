@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/bootstrap.min.css" />
+    <link rel="stylesheet" href="./src/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./src/OwlCarousel/dist/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./src/OwlCarousel/dist/assets/owl.theme.default.min.css"
+    />
+  </head>
+  <style></style>
+  <body>
+    <!-- navbar -->
+    <header class="fixed top-0 left-0 w-full z-30">
+      <div class="flex h-12 main-bg-color" id="top-nav">
+        <div class="container flex justify-between">
+          <div class="flex">
+            <div class="flex items-center">
+              <i
+                id="top-font"
+                class="fa fa-phone text-sm color-red transition-all duration-500"
+              ></i>
+              <p class="text-white ml-2">Hotline: 0909.292.579</p>
+            </div>
+            <div class="flex items-center ml-6">
+              <i
+                id="top-font"
+                class="fa fa-envelope-o text-sm color-red transition-all duration-500"
+              ></i>
+              <p class="text-white ml-2">namlongnguyenvn@gmail.com</p>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <p class="text-white uppercase md:block hidden">
+              Tư vấn thiết kế thời trang
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        id="navbar"
+        class="navbar navbar-expand-lg navbar-light bg-light z-30 bg-white text-gray-900 shadow-lg shadow-lg align-middle"
+      >
+        <div class="container px-4">
+          <a class="navbar-brand" href="#"
+            ><img class="md:h-24 h-16" src="./image/logo.png"
+          /></a>
+          <button
+            class="navbar-toggler ml-auto mr-3"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul
+              class="navbar-nav uppercase font-bold text-sm lg:text-base ml-auto"
+            >
+              <li class="inline-block">
+                <a
+                  href="#introduce"
+                  class="nav-link main-color btn-nav rounded bg-transparent transition-colors duration-500"
+                  >giới thiệu
+                </a>
+              </li>
+              <li class="nav-item dropdown inline-block">
+                <a
+                  href="#product-men"
+                  class="nav-link main-color dropdown-toggle btn-nav rounded bg-transparent transition-colors duration-500"
+                  data-toggle="dropdown"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >công sở nam</a
+                >
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">item 1</a>
+                  <a class="dropdown-item" href="#">item 2</a>
+                  <a class="dropdown-item" href="#">item 3</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown inline-block">
+                <a
+                  href="#product-women"
+                  class="nav-link main-color dropdown-toggle btn-nav rounded bg-transparent transition-colors duration-500"
+                  data-toggle="dropdown"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >công sở nữ</a
+                >
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">item 1</a>
+                  <a class="dropdown-item" href="#">item 2</a>
+                  <a class="dropdown-item" href="#">item 3</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown inline-block">
+                <a
+                  href="#accessories"
+                  class="nav-link main-color dropdown-toggle btn-nav rounded bg-transparent transition-colors duration-500"
+                  data-toggle="dropdown"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >phụ kiện</a
+                >
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">item 1</a>
+                  <a class="dropdown-item" href="#">item 2</a>
+                  <a class="dropdown-item" href="#">item 3</a>
+                </div>
+              </li>
+              <li class="nav-item inline-block">
+                <a
+                  href="#support"
+                  class="nav-link main-color btn-nav rounded bg-transparent transition-colors duration-500"
+                  >dịch vụ</a
+                >
+              </li>
+              <li class="nav-item inline-block">
+                <a
+                  href="#blog"
+                  class="nav-link main-color btn-nav rounded bg-transparent transition-colors duration-500"
+                  >blog</a
+                >
+              </li>
+              <li class="nav-item inline-block">
+                <a
+                  href="#contact"
+                  class="nav-link main-color btn-nav rounded bg-transparent transition-colors duration-500"
+                  >liên hệ</a
+                >
+              </li>
+            </ul>
+            <div class="inline-block flex items-center nav-items">
+              <i
+                class="fa fa-search cursor-pointer main-color"
+                style="font-size: 22px;"
+              ></i>
+              <i
+                class="fa fa-shopping-cart text-lg cursor-pointer ml-3 md:mr-0 mr-4 main-color"
+                style="font-size: 22px;"
+              ></i>
+              <!-- <button
+                onclick="toggleClass()"
+                id="mobile-navigation-btn"
+                class="block ml-auto lg:hidden md:block sm:block rounded px-3 py-2 bg-white border text-gray-800 focus:outline-none border-gray-800 hover:text-purple-500 hover:border-purple-500"
+              >
+                <svg
+                  class="fill-current h-3 w-3"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Menu</title>
+                  <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                </svg>
+              </button> -->
+            </div>
+          </div>
+        </div>
+        <!-- <nav
+          id="navigation"
+          class="flex flex-col uppercase container lg:hidden duration-500 ease-in-out h-0 w-full overflow-hidden"
+        >
+          <a
+            href="#introduce"
+            class="px-1 py-1 ml-2 btn-nav rounded bg-transparent transition-colors duration-500 hover:text-blue-600 hover:underline"
+            >giới thiệu</a
+          >
+          <a
+            href="#product-men"
+            class="px-1 py-1 ml-2 btn-nav rounded bg-transparent transition-colors duration-500 hover:text-blue-600 hover:underline"
+            >công sở nam</a
+          >
+          <a
+            href="#product-women"
+            class="px-1 py-1 ml-2 btn-nav rounded bg-transparent transition-colors duration-500 hover:text-blue-600 hover:underline"
+            >công sở nữ</a
+          >
+          <a
+            href="#accessories"
+            class="px-1 py-1 ml-2 btn-nav rounded bg-transparent transition-colors duration-500 hover:text-blue-600 hover:underline"
+            >phụ kiện</a
+          >
+          <a
+            href="#support"
+            class="px-1 py-1 ml-2 btn-nav rounded bg-transparent transition-colors duration-500 hover:text-blue-600 hover:underline"
+            >dịch vụ</a
+          >
+          <a
+            href="#blog"
+            class="px-1 py-1 ml-2 btn-nav rounded bg-transparent transition-colors duration-500 hover:text-blue-600 hover:underline"
+            >blog</a
+          >
+          <a
+            href="#contact"
+            class="px-1 py-1 ml-2 btn-nav rounded bg-transparent transition-colors duration-500 hover:text-blue-600 hover:underline"
+            >liên hệ</a
+          >
+        </nav> -->
+      </div>
+    </header>
+
+    <!-- banner1 -->
+    <div class="md:h-24"></div>
+    <section id="introduce" class="jumptarget">
+      <div
+        class="bg-cover bg-center w-full md:h-screen h-auto"
+        style="background-image: url(./image/banner1.png);"
+      >
+        <div class="container p-40 px-8">
+          <div class="md:w-4/6">
+            <h2
+              class="whitespace-pre-line text-white font-bold uppercase md:text-5xl text-3xl"
+            >
+              thời trang công sở nam 2020 trẻ trung & cao cấp
+            </h2>
+          </div>
+          <div class="md:w-6/12 mt-8">
+            <p class="text-white italic text-xl">
+              Phong cách thời trang công sở sự sang trọng và lịch lãm thể hiện
+              đẳng cấp MEN số 1
+            </p>
+          </div>
+          <div>
+            <button class="uppercase text-white px-8 py-2 mt-12 main-bg-color">
+              Xem thêm
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- feature -->
+    <section id="support" class="jumptarget px-4 py-4 -mt-12 mb-10">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6 py-4">
+            <div class="flex flex-col items-center justify-center">
+              <div
+                class="h-16 w-16 md:h-24 md:w-24 bg-cover bg-center rounded-tr-lg rounded-bl-lg"
+                style="background-image: url(./image/feature1.png);"
+              ></div>
+              <h3 class="font-semibold my-2 uppercase main-color">
+                Miễn phí giao hàng
+              </h3>
+              <p class="text-gray-600">
+                Tất cả đơn hàng
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 py-4">
+            <div class="flex flex-col items-center justify-center">
+              <div
+                class="h-16 w-16 md:h-24 md:w-24 bg-cover bg-center rounded-tr-lg rounded-bl-lg"
+                style="background-image: url(./image/feature2.png);"
+              ></div>
+              <h3 class="font-semibold my-2 uppercase main-color">
+                Miễn phí giao hàng
+              </h3>
+              <p class="text-gray-600">
+                Tất cả đơn hàng
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 py-4">
+            <div class="flex flex-col items-center justify-center">
+              <div
+                class="h-16 w-16 md:h-24 md:w-24 bg-cover bg-center rounded-tr-lg rounded-bl-lg"
+                style="background-image: url(./image/feature3.png);"
+              ></div>
+              <h3 class="font-semibold my-2 uppercase main-color">
+                Thẻ quà tặng đặc biệt
+              </h3>
+              <p class="text-gray-600">
+                Ưu đãi đặc biệt kèm quà tặng
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 py-4">
+            <div class="flex flex-col items-center justify-center">
+              <div
+                class="h-16 w-16 md:h-24 md:w-24 bg-cover bg-center rounded-tr-lg rounded-bl-lg"
+                style="background-image: url(./image/feature4.png);"
+              ></div>
+              <h3 class="font-semibold my-2 uppercase main-color">
+                Dịch vụ khách hàng 24/7
+              </h3>
+              <p class="text-gray-600">
+                Hỗ trợ 24/7
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- catalogy -->
+    <section class="jumptarget -mt-40">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 py-4">
+            <div
+              class="h-64 bg-cover bg-center flex justify-center items-center"
+              style="background-image: url(./image/catalogy1.png);"
+            >
+              <span class="uppercase text-white text-2xl">áo vest</span>
+            </div>
+          </div>
+          <div class="col-md-4 py-4">
+            <div
+              class="h-64 bg-cover bg-center flex justify-center items-center"
+              style="background-image: url(./image/catalogy2.png);"
+            >
+              <span class="uppercase text-white text-2xl">áo sơ mi</span>
+            </div>
+          </div>
+          <div class="col-md-4 py-4">
+            <div
+              class="h-64 bg-cover bg-center flex justify-center items-center overlay"
+              style="background-image: url(./image/catalogy3.png);"
+            >
+              <span class="uppercase text-white text-2xl">phụ kiện</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- product -->
+    <section id="product" class="jumptarget -mt-40">
+      <h2
+        class="mt-10 text-center uppercase font-semibold text-2xl mb-4 main-color"
+      >
+        sản phẩm nổi bật
+      </h2>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3 py-2 mb-3">
+            <div class="flex flex-col items-center justify-center">
+              <img
+                class="mb-4 w-auto md:mx-auto"
+                src="./image/product1.png"
+                style="height: 22rem; width: 18rem;"
+              />
+              <p class="sm:w-full uppercase main-color font-semibold">
+                áo vest nam
+              </p>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 col-lg-3 py-2 mb-3">
+            <div class="flex flex-col items-center justify-center">
+              <img
+                class="mb-4 w-auto md:mx-auto"
+                src="./image/product2.png"
+                style="height: 22rem; width: 18rem;"
+              />
+              <p class="sm:w-full uppercase main-color font-semibold">
+                áo vest nam trẻ
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 py-2 mb-3">
+            <div class="flex flex-col items-center justify-center">
+              <img
+                class="mb-4 w-auto md:mx-auto"
+                src="./image/product3.png"
+                style="height: 22rem; width: 18rem;"
+              />
+              <p class="sm:w-full uppercase main-color font-semibold">
+                bộ công sở nữ
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 py-2 mb-3">
+            <div class="flex flex-col items-center justify-center">
+              <img
+                class="mb-4 w-auto md:mx-auto"
+                src="./image/product4.png"
+                style="height: 22rem; width: 18rem;"
+              />
+              <p class="sm:w-full uppercase main-color font-semibold">
+                áo vest nam caro
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 py-2 mb-3">
+            <div class="flex flex-col items-center justify-center">
+              <img
+                class="mb-4 w-auto md:mx-auto"
+                src="./image/product5.png"
+                style="height: 22rem; width: 18rem;"
+              />
+              <p class="sm:w-full uppercase main-color font-semibold">
+                áo vest nam
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 py-2 mb-3">
+            <div class="flex flex-col items-center justify-center">
+              <img
+                class="mb-4 w-auto md:mx-auto"
+                src="./image/product6.png"
+                style="height: 22rem; width: 18rem;"
+              />
+              <p class="sm:w-full uppercase main-color font-semibold">
+                áo vest nam trẻ
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 py-2 mb-3">
+            <div class="flex flex-col items-center justify-center">
+              <img
+                class="mb-4 w-auto md:mx-auto"
+                src="./image/product7.png"
+                style="height: 22rem; width: 18rem;"
+              />
+              <p class="sm:w-full uppercase main-color font-semibold">
+                bộ công sở nữ
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 py-2 mb-3">
+            <div class="flex flex-col items-center justify-center">
+              <img
+                class="mb-4 w-auto md:mx-auto"
+                src="./image/product8.png"
+                style="height: 22rem; width: 18rem;"
+              />
+              <p class="sm:w-full uppercase main-color font-semibold">
+                áo vest nam caro
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 py-4">
+            <div
+              class="h-64 bg-cover bg-center flex justify-end items-end"
+              style="background-image: url(./image/catalogy4.png);"
+            >
+              <button
+                class="px-4 py-2 mr-4 bg-white main-color text-xl mb-4 hover:bg-gray-300 transition-all duration-500 focus:outline-none"
+              >
+                Công sở nam
+              </button>
+            </div>
+          </div>
+          <div class="col-md-6 py-4">
+            <div
+              class="h-64 bg-cover bg-center flex justify-end items-end"
+              style="background-image: url(./image/catalogy5.png);"
+            >
+              <button
+                class="px-4 py-2 mr-4 bg-white main-color text-xl mb-4 hover:bg-gray-300 transition-all duration-500 focus:outline-none"
+              >
+                Công sở nữ
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- new -->
+    <section id="blog" class="jumptarget -mt-40">
+      <div class="container">
+        <h2 class="mt-10 uppercase font-semibold text-2xl mb-2 main-color">
+          tin tức mới nhất
+        </h2>
+        <div class="row">
+          <div class="col-md-4 py-4">
+            <img src="./image/new1.png" class="w-full h-56" />
+            <div class="flex flex-col justify-between h-32 mt-6">
+              <h3 class="uppercase main-color font-semibold">
+                thời trang công sở nam hot nhất hiện nay
+              </h3>
+              <p>
+                Thời trang công sở nam là phong cách thời trang giúp bạn trông
+                điển trai và chỉnh chu hơn trong môi trường làm việc của công
+                ty,...
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 py-4">
+            <img src="./image/new2.png" class="w-full h-56" />
+            <div class="flex flex-col justify-between h-32 mt-6">
+              <h3 class="uppercase main-color font-semibold">
+                Thời trang công sở nam đẹp, hàng hiệu, cao cấp kiểu 2020
+              </h3>
+              <p>
+                Shop thời trang công sở nam đẹp, phong cách thời trang văn phòng
+                sang trọng lịch lãm, thể hiện đẳng cấp MEN số 1. Shop tại TpHCM,
+                giao hàng toàn quốc.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 py-4">
+            <img src="./image/new3.png" class="w-full h-56" />
+            <div class="flex flex-col justify-between h-32 mt-6">
+              <h3 class="uppercase main-color font-semibold">
+                xu hướng thời trang nam công sở nam 2020
+              </h3>
+              <p>
+                Bộ sưu tập thời trang công sở nam cao cấp. Với phong cách hiện
+                đại và các thiệt kế đến từ châu âu thể hiện sự sang trọng và cá
+                tính.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-24 px-8">
+          <div class="owl-carousel owl-theme">
+            <div class="item">
+              <img src="./image/partner2.png" />
+            </div>
+            <div class="item">
+              <img src="./image/partner3.png" />
+            </div>
+            <div class="item">
+              <img src="./image/partner4.png" />
+            </div>
+            <div class="item">
+              <img src="./image/partner5.png" />
+            </div>
+            <div class="item">
+              <img src="./image/partner6.png" />
+            </div>
+            <div class="item">
+              <img src="./image/partner2.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- contact -->
+    <section id="contact" class="jumptarget">
+      <div class="main-bg-color text-white py-16">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-5 w-full py-3">
+              <h3 class="uppercase font-semibold text-lg">
+                Nhà thiết kế thời trang công sở - Long Tailor
+              </h3>
+              <div class="table mt-4">
+                <div class="table-row-group">
+                  <div class="table-row">
+                    <h5 class="table-cell text-lg text-white">
+                      <i class="fa fa-map-marker"></i>
+                    </h5>
+                    <span class="table-cell px-2 text-sm"
+                      >133 Nguyễn Hữu Cảnh, Phường 22, Q.Bình Thạnh,
+                      Tp.HCM</span
+                    >
+                  </div>
+                  <div class="table-row">
+                    <h5 class="table-cell text-lg text-white">
+                      <i class="fa fa-phone"></i>
+                    </h5>
+                    <span class="table-cell px-2 text-sm"
+                      >Hotline: 0909.270.579</span
+                    >
+                  </div>
+                  <div class="table-row">
+                    <h5 class="table-cell text-lg text-white">
+                      <i class="fa fa-envelope-o"></i>
+                    </h5>
+                    <span class="table-cell px-2 text-sm"
+                      >namlongnguyenvn@gmail.com</span
+                    >
+                  </div>
+                  <div class="table-row">
+                    <h5 class="table-cell text-lg text-white">
+                      <i class="fa fa-link"></i>
+                    </h5>
+                    <span class="table-cell px-2 text-sm"
+                      >https://namlongnguyen.vn</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 w-full py-3">
+              <h3 class="uppercase text-lg">
+                Thông tin hỗ trợ
+              </h3>
+              <div class="flex flex-col md:mt-10">
+                <a href="#">Công sở nam</a>
+                <a href="#">Công sở nữ</a>
+                <a href="#">Phụ kiện</a>
+                <a href="#">Dịch vụ sửa đồ</a>
+              </div>
+            </div>
+            <div class="col-md-4 w-full py-3">
+              <h3 class="uppercase text-lg">
+                Đăng ký nhận tin
+              </h3>
+              <div class="flex justify-center items-center md:mt-6">
+                <input
+                  type="email"
+                  class="my-4 my-4 main-color w-full px-6 py-1 rounded-r-none rounded-l-md transition-all duration-500 block text-lg bg-white border border-transparent hover:bg-gray-300 hover:border-gray-400 focus:bg-white focus:shadow-outline focus:border-gray-300 focus:outline-none"
+                  name="tt"
+                  placeholder="Nhập địa chỉ email"
+                  autocomplete="off"
+                />
+                <button
+                  class="uppercase bg-gray-600 md:px-0 text-sm md:text-base w-32 h-10 rounded-r-md focus:outline-none hover:bg-gray-700 transition-all duration-300"
+                >
+                  đăng ký
+                </button>
+              </div>
+              <h3 class="uppercase text-lg">
+                Thống kê truy cập
+              </h3>
+              <div class="flex mt-2">
+                <span class="table-cell text-sm">Đang online: 30</span>
+                <span class="table-cell px-4 ml-6 text-sm"
+                  >Tổng truy cập: 15000</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer class="w-full main-bg-color border-gray-700 border-t">
+      <div class="container flex justify-between items-center text-white h-16">
+        <div class="text-sm md:text-base md:px-0 px-10">
+          Copyright © 2020 - namlongnguyen.vn - All Rights Resereved. Powered By
+          SID
+        </div>
+        <div class="flex text-3xl lg:block hidden">
+          <i
+            class="fa fa-facebook-official mx-2 hover:text-gray-500 transition-all duration-300 cursor-pointer"
+          ></i>
+          <i
+            class="fa fa-twitter mx-2 hover:text-gray-500 transition-all duration-300 cursor-pointer"
+          ></i>
+          <i
+            class="fa fa-pinterest mx-2 hover:text-gray-500 transition-all duration-300 cursor-pointer"
+          ></i>
+          <i
+            class="fa fa-linkedin mx-2 hover:text-gray-500 transition-all duration-300 cursor-pointer"
+          ></i>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script>
+    function toggleClass() {
+      const navMb = document.getElementById("navigation");
+      navMb.classList.toggle("h-56");
+    }
+    window.onscroll = function () {
+      scrollFunction();
+    };
+
+    function scrollFunction() {
+      const navbar = document.getElementById("top-nav");
+      const topFont = document.querySelectorAll("#top-font");
+      if (
+        document.body.scrollTop > 80 ||
+        document.documentElement.scrollTop > 80
+      ) {
+        navbar.classList.add("h-0");
+        navbar.classList.remove("h-12");
+        topFont[0].classList.add("text-white");
+        topFont[0].classList.remove("color-red");
+        topFont[1].classList.add("text-white");
+        topFont[1].classList.remove("color-red");
+      } else {
+        navbar.classList.add("h-12");
+        navbar.classList.remove("h-0");
+        topFont[0].classList.add("color-red");
+        topFont[0].classList.remove("text-white");
+        topFont[1].classList.add("color-red");
+        topFont[1].classList.remove("text-white");
+      }
+    }
+  </script>
+  <script src="./src/jquery.min.js"></script>
+  <script src="./src/popper.min.js"></script>
+  <script src="./src/bootstrap.min.js"></script>
+  <script src="./src/OwlCarousel/dist/owl.carousel.min.js"></script>
+  <script>
+    $(".owl-carousel").owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      dots: false,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        600: {
+          items: 3,
+        },
+        1000: {
+          items: 5,
+        },
+      },
+    });
+  </script>
+</html>
