@@ -4,8 +4,8 @@
   "description": "psd-html",
   "main": "index.hmml",
   "scripts": {
-    "build:css": "tailwind build src/style.css -o src/main.css",
-    "build": "postcss src/style.css -o src/main.css"
+    "build:css": "tailwind build css/style.css -o css/main.css",
+    "build": "postcss css/style.css -o css/main.css"
   },
   "author": "",
   "license": "ISC",
