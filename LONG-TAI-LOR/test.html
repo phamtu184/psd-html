@@ -5,99 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      section {
-        font-family: "Open Sans", sans-serif;
-        height: 350px;
+      figure {
+        width: 300px;
+        height: 200px;
+        margin: 0;
+        padding: 0;
+        background: #fff;
+        overflow: hidden;
+      }
+      figure:hover + span {
+        bottom: -36px;
+        opacity: 1;
+      }
+
+      .hover14 figure {
         position: relative;
-        background-clip: fixed;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-        overflow: hidden;
-        width: 94%;
-        margin: 0 auto 30px;
       }
-      section a {
-        text-transform: uppercase;
-        font-weight: 800;
-        text-align: center;
-        text-decoration: none;
-        color: #fff;
+      .hover14 figure::before {
+        position: absolute;
+        top: 0;
+        left: -75%;
+        z-index: 2;
         display: block;
-        font-size: 4.875em;
-      }
-      .p6 {
-        background-image: url(./image/catalogy4.png);
-        overflow: hidden;
-      }
-
-      .p6 a {
-        width: 474px;
-        height: 58px;
-        line-height: 58px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-left: -237px;
-        margin-top: -29px;
-        -webkit-transition: all 0.6s cubic-bezier(0, 0.28, 0, 1);
-        -moz-transition: all 0.6s cubic-bezier(0, 0.28, 0, 1);
-        -ms-transition: all 0.6s cubic-bezier(0, 0.28, 0, 1);
-        -o-transition: all 0.6s cubic-bezier(0, 0.28, 0, 1);
-        transition: all 0.6s cubic-bezier(0, 0.28, 0, 1);
-      }
-
-      .p6 a:before,
-      .p6 a:after {
         content: "";
-        background-color: #fff;
-        height: 4px;
-        position: absolute;
-        -webkit-transform: scale(1) rotate(0deg);
-        -moz-transform: scale(1) rotate(0deg);
-        -ms-transform: scale(1) rotate(0deg);
-        -o-transform: scale(1) rotate(0deg);
-        transform: scale(1) rotate(0deg);
-        -webkit-transition: all 0.7s cubic-bezier(0.2, 0.02, 0, 1.01) 0.1s;
-        -moz-transition: all 0.7s cubic-bezier(0.2, 0.02, 0, 1.01) 0.1s;
-        -ms-transition: all 0.7s cubic-bezier(0.2, 0.02, 0, 1.01) 0.1s;
-        -o-transition: all 0.7s cubic-bezier(0.2, 0.02, 0, 1.01) 0.1s;
-        transition: all 0.7s cubic-bezier(0.2, 0.02, 0, 1.01) 0.1s;
-        width: 474px;
+        width: 50%;
+        height: 100%;
+        background: -webkit-linear-gradient(
+          left,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.3) 100%
+        );
+        background: linear-gradient(
+          to right,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.3) 100%
+        );
+        -webkit-transform: skewX(-25deg);
+        transform: skewX(-25deg);
       }
-
-      .p6 a:before {
-        right: 0;
-        top: -10px;
+      .hover14 figure:hover::before {
+        -webkit-animation: shine 0.75s;
+        animation: shine 0.75s;
       }
-
-      .p6 a:after {
-        left: 0;
-        bottom: -13px;
+      @-webkit-keyframes shine {
+        100% {
+          left: 125%;
+        }
       }
-
-      .p6:hover a {
-        -webkit-transform: scale(0.8) rotate(-40deg);
-        -moz-transform: scale(0.8) rotate(-40deg);
-        -ms-transform: scale(0.8) rotate(-40deg);
-        -o-transform: scale(0.8) rotate(-40deg);
-        transform: scale(0.8) rotate(-40deg);
-      }
-
-      .p6:hover a:before,
-      .p6:hover a:after {
-        width: 1000px;
+      @keyframes shine {
+        100% {
+          left: 125%;
+        }
       }
     </style>
   </head>
   <body>
     <div>
-      <section class="p6">
-        <a href="#">TROPICALIA</a>
-      </section>
-      <section class="p7">
-        <a href="#">BRIDGE</a>
-      </section>
+      <div class="hover14 column">
+        <div>
+          <figure><img src="https://picsum.photos/300/200?image=244" /></figure>
+          <span>Hover</span>
+        </div>
+        <div>
+          <figure>
+            <img src="https://picsum.photos/300/200?image=1024" />
+          </figure>
+          <span>Hover</span>
+        </div>
+        <div>
+          <figure><img src="https://picsum.photos/300/200?image=611" /></figure>
+          <span>Hover</span>
+        </div>
+      </div>
     </div>
   </body>
 </html>

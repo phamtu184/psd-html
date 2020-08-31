@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/aos.css" />
+    <link rel="stylesheet" href="./css/animate.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+  </head>
+  <style>
+    html,body{height:100%;}
+.carousel,.item,.active{height:100%;}
+.carousel-inner{height:100%;}
+.main-color{
+  color:#7A272A;
+}
+.main-bg-color{
+  background-color:#7A272A ;
+}
+
+.overlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0);
+  clip-path: polygon(0 0, 55% 0, 45% 100%, 0% 100%);
+  opacity: 0.4;
+}
+@media (max-width: 1024px) {
+  .navbar-header {
+      float: none;
+  }
+  .navbar-left,.navbar-right {
+      float: none !important;
+  }
+  .navbar-toggle {
+      display: block;
+  }
+  .navbar-collapse {
+      border-top: 1px solid transparent;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .navbar-fixed-top {
+      top: 0;
+      border-width: 0 0 1px;
+  }
+  .navbar-collapse.collapse {
+      display: none!important;
+  }
+  .navbar-nav {
+      float: none!important;
+      margin-top: 7.5px;
+  }
+  .navbar-nav>li {
+      float: none;
+  }
+  .navbar-nav>li>a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+  .collapse.in{
+      display:block !important;
+  }
+}
+.carousel-caption {
+  left: unset !important;
+  top: 25% !important;
+  text-align: unset !important;
+}
+@media only screen and (max-width: 1530px) {
+  .carousel-caption {
+    top: 15% !important;
+    left: 15% !important;
+  }
+}
+@media only screen and (max-width: 1530px) {
+  .carousel-caption h2 {
+    font-size: 2rem !important;
+  }
+  .carousel-caption p {
+    font-size: 1.5rem !important;
+  }
+}
+@media only screen and (max-width: 865px) {
+  .carousel-caption {
+    top: 5% !important;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .carousel-caption {
+    display: none !important;
+  }
+  .overlay{
+    display: none !important;
+  }
+}
+  </style>
+  <body>
+   <!-- navbar -->
+   <header class="lg:mb-32 mb-20">
+    <nav
+      id="navbar"
+      class="navbar navbar-default navbar-fixed-top lg:h-32 lg:flex lg:justify-center lg:items-center"
+      style="background-color:white"
+    >
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" style="padding: 0" href="#">
+            <img class="lg:h-24 h-16 Brand" src="./image/header-logo.png"/>
+          </a>
+        </div>
+        <div class="collapse navbar-collapse uppercase font-bold" id="navbarSupportedContent">
+          <ul
+            class="nav navbar-nav"
+          >
+            <li class="inline-block">
+              <a
+                href="#home"
+                class="nav-link black-color btn-nav rounded bg-transparent transition-colors duration-500"
+                >trang chủ
+              </a>
+            </li>
+            <li class="inline-block">
+              <a
+                href="#introduce"
+                class="nav-link black-color btn-nav rounded bg-transparent transition-colors duration-500"
+                >giới thiệu
+              </a>
+            </li>
+            <li class="dropdown inline-block">
+              <a href="#product" class="dropdown-toggle black-color btn-nav rounded bg-transparent transition-colors duration-500" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">sản phẩm <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+            <li class="dropdown inline-block">
+              <a href="#project" class="dropdown-toggle black-color btn-nav rounded bg-transparent transition-colors duration-500" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">dự án<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+            <li class="inline-block">
+              <a
+                href="#shop"
+                class="nav-link black-color btn-nav rounded bg-transparent transition-colors duration-500"
+                >cửa hàng bán lẻ</a
+              >
+            </li>
+            <li class="inline-block">
+              <a
+                href="#blog"
+                class="nav-link black-color btn-nav rounded bg-transparent transition-colors duration-500"
+                >blog</a
+              >
+            </li>
+            <li class="inline-block">
+              <a
+                href="#contact"
+                class="nav-link black-color btn-nav rounded bg-transparent transition-colors duration-500"
+                >liên hệ</a
+              >
+            </li>
+            <li class="inline-block">
+              <div class="md:ml-8 inline-block flex">
+                <img class="h-8 cursor-pointer" src="./image/vietnam.png" />
+                <img class="h-8 cursor-pointer ml-2" src="./image/uk.png" />
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- carousel -->
+  <section >
+    <div id="carousel-generic" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-generic" data-slide-to="2"></li>
+        <li data-target="#carousel-generic" data-slide-to="3"></li>
+      </ol>
+  
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active relative">
+          <img class="w-full h-full bg-center bg-cover" src="https://unsplash.it/1400/600?image=114">
+          <div class="overlay"></div>
+          <div
+              class="container carousel-caption d-none d-md-block animate__animated animate__slideInDown"
+            >
+              <div class="row">
+                <div class="col-md-6">
+                  <h2
+                    class="whitespace-pre-line text-white font-bold uppercase lg:text-5xl md:text-3xl leading-relaxed"
+                  >
+                    cung cấp các mặt hàng nội thất chất lượng cao
+                  </h2>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mt-8">
+                  <div class="flex my-2">
+                    <img class="h-6" src="./image/Shape 2.png"/>
+                    <p class="text-white italic">
+                      Đa dạng về phong cách và kiểu dáng
+                    </p>
+                  </div>
+                  <div class="flex my-2">
+                    <img class="h-6" src="./image/Shape 2.png"/>
+                    <p class="text-white italic">
+                      Đa dạng về vật liệu
+                    </p>
+                  </div>
+                  <div class="flex my-2">
+                    <img class="h-6" src="./image/Shape 2.png"/>
+                    <p class="text-white italic">
+                      Giá cả hợp lý
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="uppercase text-white px-8 py-2 mt-12 main-bg-color border border-white"
+              >
+                Xem thêm
+              </button>
+            </div>
+        </div>
+        <div class="item relative">
+          <img class="w-full h-full bg-center bg-cover" src="https://unsplash.it/1400/600?image=62">
+          <div class="overlay"></div>
+          <div
+              class="container carousel-caption d-none d-md-block animate__animated animate__slideInDown"
+            >
+              <div class="row">
+                <div class="col-md-6">
+                  <h2
+                    class="whitespace-pre-line text-white font-bold uppercase lg:text-5xl md:text-3xl leading-relaxed"
+                  >
+                  cung cấp các mặt hàng nội thất chất lượng cao
+                  </h2>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mt-8">
+                  <div class="flex my-2">
+                    <img class="h-6" src="./image/Shape 2.png"/>
+                    <p class="text-white italic">
+                      Đa dạng về phong cách và kiểu dáng
+                    </p>
+                  </div>
+                  <div class="flex my-2">
+                    <img class="h-6" src="./image/Shape 2.png"/>
+                    <p class="text-white italic">
+                      Đa dạng về vật liệu
+                    </p>
+                  </div>
+                  <div class="flex my-2">
+                    <img class="h-6" src="./image/Shape 2.png"/>
+                    <p class="text-white italic">
+                      Giá cả hợp lý
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="uppercase text-white px-8 py-2 mt-12 main-bg-color border border-white"
+              >
+                Xem thêm
+              </button>
+            </div>
+        </div>
+        <div class="item relative">
+          <img class="w-full h-full bg-center bg-cover" src="https://unsplash.it/1400/600?image=315">
+          <div class="overlay"></div>
+          <div
+              class="container carousel-caption d-none d-md-block animate__animated animate__slideInDown"
+            >
+              <div class="row">
+                <div class="col-md-6">
+                  <h2
+                    class="whitespace-pre-line text-white font-bold uppercase lg:text-5xl md:text-3xl leading-relaxed"
+                  >
+                  cung cấp các mặt hàng nội thất chất lượng cao
+                  </h2>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mt-8">
+                  <div class="flex my-2">
+                    <img class="h-6" src="./image/Shape 2.png"/>
+                    <p class="text-white italic">
+                      Đa dạng về phong cách và kiểu dáng
+                    </p>
+                  </div>
+                  <div class="flex my-2">
+                    <img class="h-6" src="./image/Shape 2.png"/>
+                    <p class="text-white italic">
+                      Đa dạng về vật liệu
+                    </p>
+                  </div>
+                  <div class="flex my-2">
+                    <img class="h-6" src="./image/Shape 2.png"/>
+                    <p class="text-white italic">
+                      Giá cả hợp lý
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="uppercase text-white px-8 py-2 mt-12 main-bg-color border border-white"
+              >
+                Xem thêm
+              </button>
+            </div>
+        </div>
+        <div class="item relative">
+          <img class="w-full h-full bg-center bg-cover" src="https://unsplash.it/1400/600?image=622">
+          <div class="overlay"></div>
+          <div
+              class="container carousel-caption d-none d-md-block animate__animated animate__slideInDown"
+            >
+              <div class="row">
+                <div class="col-md-6">
+                  <h2
+                    class="whitespace-pre-line text-white font-bold uppercase lg:text-5xl md:text-3xl leading-relaxed"
+                  >
+                  cung cấp các mặt hàng nội thất chất lượng cao
+                  </h2>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mt-8">
+                  <div class="flex my-2">
+                    <img class="h-6" src="./image/Shape 2.png"/>
+                    <p class="text-white italic">
+                      Đa dạng về phong cách và kiểu dáng
+                    </p>
+                  </div>
+                  <div class="flex my-2">
+                    <img class="h-6" src="./image/Shape 2.png"/>
+                    <p class="text-white italic">
+                      Đa dạng về vật liệu
+                    </p>
+                  </div>
+                  <div class="flex my-2">
+                    <img class="h-6" src="./image/Shape 2.png"/>
+                    <p class="text-white italic">
+                      Giá cả hợp lý
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="uppercase text-white px-8 py-2 mt-12 main-bg-color border border-white"
+              >
+                Xem thêm
+              </button>
+            </div>
+        </div>
+      </div>
+  
+      <!-- Controls -->
+      <a class="left carousel-control" href="#carousel-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  
+  </div>
+  </section>
+  <div style="height: 1500px;"></div>
+  </body>
+  <script src="./js/aos.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="./js/owl.carousel.min.js"></script>
+  <script>
+    $(".owl-carousel").owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      dots: false,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        600: {
+          items: 3,
+        },
+        1000: {
+          items: 5,
+        },
+      },
+    });
+  </script>
+</html>
