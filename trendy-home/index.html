@@ -14,97 +14,6 @@
     />
     <link rel="stylesheet" href="./css/owl.carousel.min.css" />
   </head>
-  <style>
-    html,body{height:100%;}
-.carousel,.item,.active{height:100%;}
-.carousel-inner{height:100%;}
-.main-color{
-  color:#7A272A;
-}
-.main-bg-color{
-  background-color:#7A272A ;
-}
-
-.overlay {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgb(0, 0, 0);
-  clip-path: polygon(0 0, 55% 0, 45% 100%, 0% 100%);
-  opacity: 0.4;
-}
-@media (max-width: 1024px) {
-  .navbar-header {
-      float: none;
-  }
-  .navbar-left,.navbar-right {
-      float: none !important;
-  }
-  .navbar-toggle {
-      display: block;
-  }
-  .navbar-collapse {
-      border-top: 1px solid transparent;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
-  }
-  .navbar-fixed-top {
-      top: 0;
-      border-width: 0 0 1px;
-  }
-  .navbar-collapse.collapse {
-      display: none!important;
-  }
-  .navbar-nav {
-      float: none!important;
-      margin-top: 7.5px;
-  }
-  .navbar-nav>li {
-      float: none;
-  }
-  .navbar-nav>li>a {
-      padding-top: 10px;
-      padding-bottom: 10px;
-  }
-  .collapse.in{
-      display:block !important;
-  }
-}
-.carousel-caption {
-  left: unset !important;
-  top: 25% !important;
-  text-align: unset !important;
-}
-@media only screen and (max-width: 1530px) {
-  .carousel-caption {
-    top: 15% !important;
-    left: 15% !important;
-  }
-}
-@media only screen and (max-width: 1530px) {
-  .carousel-caption h2 {
-    font-size: 2rem !important;
-  }
-  .carousel-caption p {
-    font-size: 1.5rem !important;
-  }
-}
-@media only screen and (max-width: 865px) {
-  .carousel-caption {
-    top: 5% !important;
-  }
-}
-@media only screen and (max-width: 750px) {
-  .carousel-caption {
-    display: none !important;
-  }
-  .overlay{
-    display: none !important;
-  }
-}
-  </style>
   <body>
    <!-- navbar -->
    <header class="lg:mb-32 mb-20">
@@ -128,6 +37,7 @@
         <div class="collapse navbar-collapse uppercase font-bold" id="navbarSupportedContent">
           <ul
             class="nav navbar-nav"
+            style='float:right'
           >
             <li class="inline-block">
               <a
@@ -146,25 +56,17 @@
             <li class="dropdown inline-block">
               <a href="#product" class="dropdown-toggle black-color btn-nav rounded bg-transparent transition-colors duration-500" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">sản phẩm <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">One more separated link</a></li>
+                <li><a href="#">product 1</a></li>
+                <li><a href="#">product 2</a></li>
+                <li><a href="#">product 3</a></li>
               </ul>
             </li>
             <li class="dropdown inline-block">
               <a href="#project" class="dropdown-toggle black-color btn-nav rounded bg-transparent transition-colors duration-500" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">dự án<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">One more separated link</a></li>
+                <li><a href="#">project 1</a></li>
+                <li><a href="#">project 2</a></li>
+                <li><a href="#">project 3</a></li>
               </ul>
             </li>
             <li class="inline-block">
@@ -181,14 +83,18 @@
                 >blog</a
               >
             </li>
-            <li class="inline-block">
+            <li class="inline-block relative">
               <a
                 href="#contact"
                 class="nav-link black-color btn-nav rounded bg-transparent transition-colors duration-500"
                 >liên hệ</a
               >
+              <div class="flags absolute md:ml-8 inline-block flex" style="top: -10px; left: 0;">
+                <img class="h-8 cursor-pointer" src="./image/vietnam.png" />
+                <img class="h-8 cursor-pointer ml-2" src="./image/uk.png" />
+              </div>
             </li>
-            <li class="inline-block">
+            <li class="flags-res inline-block" style="display: none;">
               <div class="md:ml-8 inline-block flex">
                 <img class="h-8 cursor-pointer" src="./image/vietnam.png" />
                 <img class="h-8 cursor-pointer ml-2" src="./image/uk.png" />
@@ -219,7 +125,7 @@
               class="container carousel-caption d-none d-md-block animate__animated animate__slideInDown"
             >
               <div class="row">
-                <div class="col-md-6">
+                <div class="col-sm-6">
                   <h2
                     class="whitespace-pre-line text-white font-bold uppercase lg:text-5xl md:text-3xl leading-relaxed"
                   >
@@ -228,7 +134,7 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-6 mt-8">
+                <div class="col-sm-6 mt-8">
                   <div class="flex my-2">
                     <img class="h-6" src="./image/Shape 2.png"/>
                     <p class="text-white italic">
@@ -263,7 +169,7 @@
               class="container carousel-caption d-none d-md-block animate__animated animate__slideInDown"
             >
               <div class="row">
-                <div class="col-md-6">
+                <div class="col-sm-6">
                   <h2
                     class="whitespace-pre-line text-white font-bold uppercase lg:text-5xl md:text-3xl leading-relaxed"
                   >
@@ -272,7 +178,7 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-6 mt-8">
+                <div class="col-sm-6 mt-8">
                   <div class="flex my-2">
                     <img class="h-6" src="./image/Shape 2.png"/>
                     <p class="text-white italic">
@@ -307,7 +213,7 @@
               class="container carousel-caption d-none d-md-block animate__animated animate__slideInDown"
             >
               <div class="row">
-                <div class="col-md-6">
+                <div class="col-sm-6">
                   <h2
                     class="whitespace-pre-line text-white font-bold uppercase lg:text-5xl md:text-3xl leading-relaxed"
                   >
@@ -316,7 +222,7 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-6 mt-8">
+                <div class="col-sm-6 mt-8">
                   <div class="flex my-2">
                     <img class="h-6" src="./image/Shape 2.png"/>
                     <p class="text-white italic">
@@ -351,7 +257,7 @@
               class="container carousel-caption d-none d-md-block animate__animated animate__slideInDown"
             >
               <div class="row">
-                <div class="col-md-6">
+                <div class="col-sm-6">
                   <h2
                     class="whitespace-pre-line text-white font-bold uppercase lg:text-5xl md:text-3xl leading-relaxed"
                   >
@@ -360,7 +266,7 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-6 mt-8">
+                <div class="col-sm-6 mt-8">
                   <div class="flex my-2">
                     <img class="h-6" src="./image/Shape 2.png"/>
                     <p class="text-white italic">
@@ -400,33 +306,412 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
-  
   </div>
   </section>
-  <div style="height: 1500px;"></div>
+
+  <!-- introduce -->
+  <section>
+    <div class="container mt-32">
+      <div  class="row">
+        <div data-aos="fade-down" class="col-md-6 black-color">
+          <h3 class="uppercase font-semibold mb-4">giới thiệu</h3>
+          <h2 class="title relative uppercase font-semibold text-4xl tracking-wide mb-12">chúng tôi là ai?</h2>
+          <div class='black-color font-medium leading-relaxed'>
+            <p class="my-10">Công ty TNHH Thương Mại-Sản Xuất ĐN được thành lập năm 2013 bởi sáng lập viên đầy tâm huyết và đội ngũ nhân sự vớNi hơn 15 năm kinh nghiệm trong ngành đồ gỗ nội thất.</p>
+            <p class="my-10">Công ty chúng tôi chuyên cung cấp các mặt hàng nội thất chất lượng cao, đa dạng về phong cách và kiểu dáng, đa dạng về vật liệu, giá cả hợp lý.</p>
+            <p class="my-10">Sản phẩm của chúng tôi được sản xuất bởi các đối tác nhà máy uy tín hàng đầu Việt Nam với tiêu chuẩn xuất khẩu và được xuất đến các thị trường Mỹ, Châu Âu, Trung Đông…</p>
+          </div>
+          <div class="row md:mt-24 mt-12">
+            <div class="col-sm-6 my-4">
+              <button class="btn-w uppercase main-color text-2xl font-semibold bg-white py-2 px-24 rounded-full border-2 border-gray-700 focus:outline-none transition-all duration-300">giới thiệu về đn</button>
+            </div>
+            <div class="col-sm-6 my-4">
+              <button class="btn-r uppercase main-bg-color text-2xl font-semibold text-white py-2 px-24 rounded-full border-2 focus:outline-none transition-all duration-300">profile</button>
+            </div>
+          </div>
+        </div>
+        <div data-aos="fade-up" class="col-md-6 my-10">
+          <img src="./image/introduce.png"/>
+        </div>
+      </div>
+      <div class="row my-10">
+        <div data-aos="zoom-in-up" class="col-md-6">
+          <div
+            class="bg-cover bg-center h-auto w-full black-overlay my-6"
+            style="background-image: url(./image/introduce2.png); height: 32rem;"
+          >
+            <a href="#" class="title-img text-decoration-none text-white uppercase">sản phẩm xuất khẩu</a>
+          </div>
+        </div>
+        <div data-aos="zoom-in-down" class="col-md-6">
+          <div
+            class="bg-cover bg-center h-auto w-full black-overlay my-6"
+            style="background-image: url(./image/introduce3.png); height: 32rem;"
+          >
+            <a href="#" class="title-img text-decoration-none text-white uppercase">sản phẩm ván sàn</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- some-project -->
+  <section class="bg-gray-100 pt-12">
+    <div class="container">
+      <h2 class="title relative uppercase font-semibold text-4xl tracking-wide mb-12">dự án tiêu biểu</h2>
+      <ol class="breadcrumb bg-gray-100 uppercase font-semibold" style="color: #666;">
+        <li><a href="#">tất cả</a></li>
+        <li><a href="#">căn hộ</a></li>
+        <li><a href="#">khách sạn</a></li>
+        <li class="active">nhà hàng, quán café</li>
+      </ol>
+      <div class="row">
+        <div data-aos="zoom-in-up" class="col-md-3 col-sm-6 my-6">
+          <img class="w-full h-auto" src="./image/project1.png" style="height: 36rem;"/>
+        </div>
+        <div data-aos="zoom-in-up" class="col-md-3 col-sm-6 my-6">
+          <img class="w-full h-auto" src="./image/project2.png" style="height: 36rem;"/>
+        </div>
+        <div data-aos="zoom-in-down" class="col-md-3 col-sm-6 my-6">
+          <img class="w-full h-auto" src="./image/project3.png" style="height: 36rem;"/>
+        </div>
+        <div data-aos="zoom-in-down" class="col-md-3 col-sm-6 my-6">
+          <img class="w-full h-auto" src="./image/project4.png" style="height: 36rem;"/>
+        </div>
+        <div data-aos="zoom-in-up" class="col-md-3 col-sm-6 my-6">
+          <img class="w-full h-auto" src="./image/project5.png" style="height: 36rem;"/>
+        </div>
+        <div data-aos="zoom-in-up" class="col-md-3 col-sm-6 my-6">
+          <img class="w-full h-auto" src="./image/project6.png" style="height: 36rem;"/>
+        </div>
+        <div data-aos="zoom-in-down" class="col-md-3 col-sm-6 my-6">
+          <img class="w-full h-auto" src="./image/project7.png" style="height: 36rem;"/>
+        </div>
+        <div data-aos="zoom-in-down" class="col-md-3 col-sm-6 my-6">
+          <img class="w-full h-auto" src="./image/project8.png" style="height: 36rem;"/>
+        </div>
+      </div>
+      <div class="flex justify-center my-16">
+        <button class="btn-w uppercase main-color text-2xl font-semibold bg-white py-2 px-12 rounded-full border-2 border-gray-700 focus:outline-none transition-all duration-300">xem tất cả</button>
+      </div>
+    </div>
+  </section>
+  <!-- product -->
+  <section>
+    <div class="container my-24">
+      <h2 class="title relative uppercase font-semibold text-4xl tracking-wide mb-12">sản phẩm bán lẻ</h2>
+      <div data-aos="fade-up" class="owl-carousel owl-product owl-theme">
+          <div class="item mx-10">
+            <img src="./image/product1.png" style="height: 36rem;"/>
+            <h3 class="uppercase font-semibold my-6">ghế gỗ sồi - EUF 061N</h3>
+            <div class="flex justify-between">
+              <p class="uppercase font-semibold">Giá: <span class="text-red-600">800.000 đ</span></p>
+              <button class="rounded-lg border main-border-color p-1 mr-8">
+                <img src="./image/cart-icon.png"/>
+              </button>
+            </div>
+          </div>
+          <div class="item mx-10">
+            <img src="./image/product2.png" style="height: 36rem;"/>
+            <h3 class="uppercase font-semibold my-6">ghế gỗ sồi - EUF 061N</h3>
+            <div class="flex justify-between">
+              <p class="uppercase font-semibold">Giá: <span class="text-red-600">800.000 đ</span></p>
+              <button class="rounded-lg border main-border-color p-1 mr-8">
+                <img src="./image/cart-icon.png"/>
+              </button>
+            </div>
+          </div>
+          <div class="item mx-10">
+            <img src="./image/product3.png" style="height: 36rem;"/>
+            <h3 class="uppercase font-semibold my-6">ghế gỗ sồi - EUF 061N</h3>
+            <div class="flex justify-between">
+              <p class="uppercase font-semibold">Giá: <span class="text-red-600">800.000 đ</span></p>
+              <button class="rounded-lg border main-border-color p-1 mr-8">
+                <img src="./image/cart-icon.png"/>
+              </button>
+            </div>
+          </div>
+          <div class="item mx-10">
+            <img src="./image/product4.png" style="height: 36rem;"/>
+            <h3 class="uppercase font-semibold my-6">ghế gỗ sồi - EUF 061N</h3>
+            <div class="flex justify-between">
+              <p class="uppercase font-semibold">Giá: <span class="text-red-600">800.000 đ</span></p>
+              <button class="rounded-lg border main-border-color p-1 mr-8">
+                <img src="./image/cart-icon.png"/>
+              </button>
+            </div>
+          </div>
+          <div class="item mx-10">
+            <img src="./image/product3.png" style="height: 36rem;"/>
+            <h3 class="uppercase font-semibold my-6">ghế gỗ sồi - EUF 061N</h3>
+            <div class="flex justify-between">
+              <p class="uppercase font-semibold">Giá: <span class="text-red-600">800.000 đ</span></p>
+              <button class="rounded-lg border main-border-color p-1 mr-8">
+                <img src="./image/cart-icon.png"/>
+              </button>
+            </div>
+          </div>
+          <div class="item mx-10">
+            <img src="./image/product4.png" style="height: 36rem;"/>
+            <h3 class="uppercase font-semibold my-6">ghế gỗ sồi - EUF 061N</h3>
+            <div class="flex justify-between">
+              <p class="uppercase font-semibold">Giá: <span class="text-red-600">800.000 đ</span></p>
+              <button class="rounded-lg border main-border-color p-1 mr-8">
+                <img src="./image/cart-icon.png"/>
+              </button>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+  <!-- new -->
+  <section>
+    <div class="container">
+      <h2 class="title relative uppercase font-semibold text-4xl tracking-wide mb-12">tin tức mới nhất</h2>
+      <div class="row">
+        <div data-aos="zoom-in-up" class="col-md-4 py-4">
+          <a href="#">
+            <img class="w-full h-auto" src="./image/new1.png" />
+          </a>
+          <div class="mt-6">
+            <div class="table-row mt-6">
+              <a href="#" class="table-cell h-20 uppercase text-gray-700 font-semibold">
+                những vật dụng cần thiết cho nhà bếp
+              </a>
+            </div>
+            <div class="table-row">
+              <p class="table-cell">
+                Những vật dụng cần thiết cho nhà bếp - Nhà bếp đóng vai trò quan trọng trong mỗi gia đình, là nơi cả nhà quây quần bên nhau thưởng thức những món ăn ngon tràn ngập yêu thương.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div data-aos="fade-up" class="col-md-4 py-4">
+          <a href="#">
+            <img class="w-full h-auto" src="./image/new2.png" />
+          </a>
+          <div class="mt-6">
+            <div class="table-row mt-6">
+              <a href="#" class="table-cell h-20 uppercase text-gray-700 font-semibold">
+                10 cách biến nhà chật thành không gian sống rộng rãi, thoáng mát
+              </a>
+            </div>
+            <div class="table-row">
+              <p class="table-cell">
+                10 cách biến nhà chật thành không gian sống rộng rãi, thoáng mát chỉ với những cách vô cùng đơn giản trong bài viết dưới đây cũng đủ giúp cho cuộc sống trong những ngôi nhà...
+              </p>
+            </div>
+          </div>
+        </div>
+        <div data-aos="zoom-in-down" class="col-md-4 py-4">
+          <a href="#">
+            <img class="w-full h-auto" src="./image/new3.png" />
+          </a>
+          <div class="mt-6">
+            <div class="table-row mt-6">
+              <a href="#" class="table-cell h-20 uppercase text-gray-700 font-semibold">
+                cách chọn thảm trải trên sàn để đón vận khí tốt
+              </a>
+            </div>
+            <div class="table-row">
+              <p class="table-cell">
+                Cách chọn thảm trải trên sàn để đón vận khí tốt nếu vì lý do nào đó mà căn nhà không được xây dựng theo hướng tốt cho gia chủ, thì việc sử dụng thảm đặt trước cửa chính với màu sắc...
+            </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-24 px-8 mt-10">
+        <div data-aos="fade-up" class="owl-carousel owl-partner owl-theme">
+          <div class="item">
+            <img src="./image/partner1.png" />
+          </div>
+          <div class="item">
+            <img src="./image/partner2.png" />
+          </div>
+          <div class="item">
+            <img src="./image/partner3.png" />
+          </div>
+          <div class="item">
+            <img src="./image/partner4.png" />
+          </div>
+          <div class="item">
+            <img src="./image/partner5.png" />
+          </div>
+          <div class="item">
+            <img src="./image/partner6.png" />
+          </div>
+          <div class="item">
+            <img src="./image/partner1.png" />
+          </div>
+          <div class="item">
+            <img src="./image/partner2.png" />
+          </div>
+          <div class="item">
+            <img src="./image/partner3.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+   <!-- contact -->
+   <section class="text-white py-16" style="background-color: #525252;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 py-3">
+          <h3 class="uppercase font-semibold text-3xl">
+            công ty TNHH thương mại sản xuất ĐN
+          </h3>
+          <div class="table mt-4">
+            <div class="table-row-group">
+              <div class="table-row">
+                <h5 class="table-cell text-2xl text-white">
+                  <i class="fa fa-map-marker"></i>
+                </h5>
+                <span class="table-cell px-4 text-2xl">280 Đường số 1, Phường An Lạc, Q.Bình Tân,Tp.HCM</span
+                >
+              </div>
+              <div class="table-row">
+                <h5 class="table-cell text-2xl text-white">
+                  <i class="fa fa-phone"></i>
+                </h5>
+                <span class="table-cell px-4 text-2xl"
+                  >Hotline: 0989.709.401</span
+                >
+              </div>
+              <div class="table-row">
+                <h5 class="table-cell text-2xl text-white">
+                  <i class="fa fa-envelope-o"></i>
+                </h5>
+                <span class="table-cell px-4 text-2xl"
+                  >dngnguyen@gmail.com</span
+                >
+              </div>
+              <div class="table-row">
+                <h5 class="table-cell text-2xl text-white">
+                  <i class="fa fa-link"></i>
+                </h5>
+                <span class="table-cell px-4 text-2xl"
+                  >https://companyname.com</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 lg:px-24">
+          <h3 class="uppercase text-3xl">
+            Thông tin hỗ trợ
+          </h3>
+          <div class="flex flex-col md:mt-10">
+            <a class="link py-1" href="#">Hướng dẫn mua hàng</a>
+            <a class="link py-1" href="#">Hướng dẫn thanh toán</a>
+            <a class="link py-1" href="#">Chính sách chung</a>
+            <a class="link py-1" href="#">DChính sách bảo mật</a>
+          </div>
+        </div>
+        <div class="col-md-4 py-3">
+          <h3 class="uppercase text-2xl">
+            Đăng ký nhận tin
+          </h3>
+          <div class="flex justify-center items-center md:mt-6">
+            <input
+              type="email"
+              class="my-4 my-4 main-color w-full px-6 py-1 rounded-r-none rounded-l-md transition-all duration-500 block text-2xl bg-white border border-transparent hover:bg-gray-300 hover:border-gray-400 focus:bg-white focus:shadow-outline focus:border-gray-300 focus:outline-none"
+              name="tt"
+              placeholder="Nhập địa chỉ email"
+              autocomplete="off"
+            />
+            <button
+              class="uppercase main-bg-color md:px-0 text-lg md:text-xl w-32 h-12 rounded-r-md focus:outline-none hover:bg-red-700 transition-all duration-300"
+            >
+              đăng ký
+            </button>
+          </div>
+          <h3 class="uppercase text-2xl my-4">
+            Thống kê truy cập
+          </h3>
+          <div class="flex mt-2">
+            <span class="table-cell text-2xl">Đang online: 30</span>
+            <span class="table-cell px-4 ml-6 text-2xl"
+              >Tổng truy cập: 15000</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- footer -->
+  <footer class="w-full main-bg-color border-gray-700 border-t">
+    <div class="container">
+      <div class="flex justify-between items-center text-white h-16">
+        <div class="text-xl md:text-2xl md:px-0 px-10">
+          Copyright © 2020 - Cty ĐN - All Rights Resereved. Powered By ID
+        </div>
+        <div class="flex text-5xl">
+          <i
+            class="fa fa-facebook-official mx-2 hover:text-gray-500 transition-all duration-300 cursor-pointer"
+          ></i>
+          <i
+            class="fa fa-twitter mx-2 hover:text-gray-500 transition-all duration-300 cursor-pointer"
+          ></i>
+          <i
+            class="fa fa-pinterest mx-2 hover:text-gray-500 transition-all duration-300 cursor-pointer"
+          ></i>
+          <i
+            class="fa fa-linkedin mx-2 hover:text-gray-500 transition-all duration-300 cursor-pointer"
+          ></i>
+        </div>
+      </div>
+    </div>
+    
+  </footer>
   </body>
   <script src="./js/aos.js"></script>
-  <script src="./js/main.js"></script>
   <script src="./js/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="./js/owl.carousel.min.js"></script>
   <script>
-    $(".owl-carousel").owlCarousel({
+    AOS.init();
+    $(".owl-product").owlCarousel({
       loop: true,
       margin: 10,
       nav: true,
       dots: false,
       responsive: {
         0: {
-          items: 1,
+          items: 2,
         },
         600: {
           items: 3,
         },
         1000: {
-          items: 5,
+          items: 4,
         },
       },
     });
+    $(".owl-partner").owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      dots: false,
+      responsive: {
+        0: {
+          items: 2,
+        },
+        600: {
+          items: 4,
+        },
+        1000: {
+          items: 6,
+        },
+      },
+    });
+    $(function(){
+    $('.dropdown').hover(function() {
+        $(this).addClass('open');
+    },
+    function() {
+        $(this).removeClass('open');
+    });
+});
   </script>
 </html>
