@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="font-size: 10px;">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,13 +14,30 @@
     />
     <link rel="stylesheet" href="./css/owl.carousel.min.css" />
   </head>
-  <body>
+  <body class="font-sans">
    <!-- navbar -->
-   <header class="lg:mb-32 mb-20">
+   <header class="navbar-fixed-top">
+    <div class="flex h-16 z-30" style="background-color:rgb(202, 202, 202);" id="top-nav">
+      <div class="container flex">
+        <div class="flex">
+          <div class="flex items-center">
+            <p class="text-black font-semibold text-2xl ml-2">Hotline: 09607967969</p>
+          </div>
+          <div class="flex items-center ml-6">
+            <p class="text-black font-semibold text-2xl ml-2">Email: dnnguyen@gmail.com</p>
+          </div>
+        </div>
+        <div class="flex items-center ml-auto">
+          <button class="text-white font-semibold px-16 py-1 main-bg-color rounded-lg">
+            Tư vấn thiết kế
+          </button>
+        </div>
+      </div>
+    </div>
     <nav
       id="navbar"
-      class="navbar navbar-default navbar-fixed-top lg:h-32 lg:flex lg:justify-center lg:items-center"
-      style="background-color:white"
+      class="navbar navbar-default lg:h-32 lg:flex lg:justify-center lg:items-center"
+      style="background-color:white; margin-bottom: 0;"
     >
       <div class="container">
         <div class="navbar-header">
@@ -30,7 +47,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" style="padding: 0" href="#">
+          <a class="navbar-brand flex items-center" style="padding: 0" href="#">
             <img class="lg:h-24 h-16 Brand" src="./image/header-logo.png"/>
           </a>
         </div>
@@ -106,7 +123,7 @@
     </nav>
   </header>
   <!-- carousel -->
-  <section >
+  <section class="lg:mt-48 mt-32" >
     <div id="carousel-generic" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
@@ -358,36 +375,72 @@
   <section class="bg-gray-100 pt-12">
     <div class="container">
       <h2 class="title relative uppercase font-semibold text-4xl tracking-wide mb-12">dự án tiêu biểu</h2>
-      <ol class="breadcrumb bg-gray-100 uppercase font-semibold" style="color: #666;">
-        <li><a href="#">tất cả</a></li>
-        <li><a href="#">căn hộ</a></li>
-        <li><a href="#">khách sạn</a></li>
-        <li class="active">nhà hàng, quán café</li>
-      </ol>
-      <div class="row">
-        <div data-aos="zoom-in-up" class="col-md-3 col-sm-6 my-6">
-          <img class="w-full h-auto" src="./image/project1.png" style="height: 36rem;"/>
+      <div class="flex flex-row uppercase mb-6">
+        <span
+          id="all"
+          class="px-3 py-4 cursor-pointer tab font-semibold border-indigo-400 border-b-4"
+          data-filter='all'
+          onclick="handleTab(event,'all')"
+        >
+          tất cả
+        </span>
+        <span
+          id="apartment"
+          class="px-3 py-4 cursor-pointer tab font-semibold"
+          onclick="handleTab(event,'apartment')"
+          data-filter='.apartment'
+        >
+          căn hộ
+        </span>
+        <span
+          id="hotel"
+          class="px-3 py-4 cursor-pointer tab font-semibold"
+          onclick="handleTab(event,'hotel')"
+          data-filter='.hotel'
+        >
+          khách sạn
+        </span>
+        <span
+          id="restaurant"
+          class="px-3 py-4 cursor-pointer tab font-semibold"
+          onclick="handleTab(event,'restaurant')"
+          data-filter='.restaurant'
+        >
+          nhà hàng
+        </span>
+        <span
+          id="cafe"
+          class="px-3 py-4 cursor-pointer tab font-semibold"
+          onclick="handleTab(event,'cafe')"
+          data-filter='.cafe'
+        >
+          quán café
+        </span>
+    </div>
+      <div class="row mixiconfig">
+        <div class="col-md-3 col-sm-6 my-6 mix hotel">
+          <img data-aos="zoom-in-up" class="w-full h-auto" src="./image/project1.png" style="height: 36rem;"/>
         </div>
-        <div data-aos="zoom-in-up" class="col-md-3 col-sm-6 my-6">
-          <img class="w-full h-auto" src="./image/project2.png" style="height: 36rem;"/>
+        <div class="col-md-3 col-sm-6 my-6 mix apartment">
+          <img data-aos="zoom-in-up" class="w-full h-auto" src="./image/project2.png" style="height: 36rem;"/>
         </div>
-        <div data-aos="zoom-in-down" class="col-md-3 col-sm-6 my-6">
-          <img class="w-full h-auto" src="./image/project3.png" style="height: 36rem;"/>
+        <div class="col-md-3 col-sm-6 my-6 mix restaurant">
+          <img data-aos="zoom-in-down" class="w-full h-auto" src="./image/project3.png" style="height: 36rem;"/>
         </div>
-        <div data-aos="zoom-in-down" class="col-md-3 col-sm-6 my-6">
-          <img class="w-full h-auto" src="./image/project4.png" style="height: 36rem;"/>
+        <div class="col-md-3 col-sm-6 my-6 mix hotel">
+          <img data-aos="zoom-in-down" class="w-full h-auto" src="./image/project4.png" style="height: 36rem;"/>
         </div>
-        <div data-aos="zoom-in-up" class="col-md-3 col-sm-6 my-6">
-          <img class="w-full h-auto" src="./image/project5.png" style="height: 36rem;"/>
+        <div class="col-md-3 col-sm-6 my-6 mix cafe">
+          <img data-aos="zoom-in-up" class="w-full h-auto" src="./image/project5.png" style="height: 36rem;"/>
         </div>
-        <div data-aos="zoom-in-up" class="col-md-3 col-sm-6 my-6">
-          <img class="w-full h-auto" src="./image/project6.png" style="height: 36rem;"/>
+        <div class="col-md-3 col-sm-6 my-6 mix restaurant">
+          <img data-aos="zoom-in-up" class="w-full h-auto" src="./image/project6.png" style="height: 36rem;"/>
         </div>
-        <div data-aos="zoom-in-down" class="col-md-3 col-sm-6 my-6">
-          <img class="w-full h-auto" src="./image/project7.png" style="height: 36rem;"/>
+        <div class="col-md-3 col-sm-6 my-6 mix apartment">
+          <img data-aos="zoom-in-up" class="w-full h-auto" src="./image/project7.png" style="height: 36rem;"/>
         </div>
-        <div data-aos="zoom-in-down" class="col-md-3 col-sm-6 my-6">
-          <img class="w-full h-auto" src="./image/project8.png" style="height: 36rem;"/>
+        <div class="col-md-3 col-sm-6 my-6 mix cafe">
+          <img data-aos="zoom-in-down" class="w-full h-auto" src="./image/project8.png" style="height: 36rem;"/>
         </div>
       </div>
       <div class="flex justify-center my-16">
@@ -605,7 +658,7 @@
             <a class="link py-1" href="#">Hướng dẫn mua hàng</a>
             <a class="link py-1" href="#">Hướng dẫn thanh toán</a>
             <a class="link py-1" href="#">Chính sách chung</a>
-            <a class="link py-1" href="#">DChính sách bảo mật</a>
+            <a class="link py-1" href="#">Chính sách bảo mật</a>
           </div>
         </div>
         <div class="col-md-4 py-3">
@@ -642,7 +695,7 @@
   <!-- footer -->
   <footer class="w-full main-bg-color border-gray-700 border-t">
     <div class="container">
-      <div class="flex justify-between items-center text-white h-16">
+      <div class="flex justify-between items-center text-white h-20">
         <div class="text-xl md:text-2xl md:px-0 px-10">
           Copyright © 2020 - Cty ĐN - All Rights Resereved. Powered By ID
         </div>
@@ -669,8 +722,25 @@
   <script src="./js/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="./js/owl.carousel.min.js"></script>
+  <script src="./js/mixitup.min.js"></script>
   <script>
-    AOS.init();
+    window.onscroll = function () {
+      scrollFunction();
+    };
+
+    function scrollFunction() {
+      const navbar = document.getElementById("top-nav");
+      if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        navbar.classList.add("h-0");
+        navbar.classList.remove("h-16");
+      } else {
+        navbar.classList.add("h-16");
+        navbar.classList.remove("h-0");
+      }
+    }
+    AOS.init({once:true});
+    var config = document.querySelector(".mixiconfig");
+    var mixer = mixitup(config);
     $(".owl-product").owlCarousel({
       loop: true,
       margin: 10,
@@ -706,12 +776,22 @@
       },
     });
     $(function(){
-    $('.dropdown').hover(function() {
+      $('.dropdown').hover(function() {
         $(this).addClass('open');
-    },
-    function() {
+      },
+      function() {
         $(this).removeClass('open');
+      });
     });
-});
+    function handleTab(e, tab) {
+      let tabLink = document.getElementsByClassName("tab");
+      for (let i = 0; i < tabLink.length; i++) {
+        tabLink[i].className = tabLink[i].className.replace(
+          " border-indigo-400 border-b-4",
+          ""
+        );
+      }
+      e.currentTarget.className += " border-indigo-400 border-b-4";
+    }
   </script>
 </html>

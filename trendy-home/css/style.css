@@ -89,6 +89,19 @@ html,
 body {
   height: 100%;
 }
+@media only screen and (max-width: 600px) {
+  #top-nav p {
+    font-size: 1.25rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  #top-nav button {
+    font-size: 1.25rem;
+  }
+}
+.h-0 {
+  height: 0;
+}
 .carousel,
 .item,
 .active {
@@ -117,7 +130,7 @@ body {
   clip-path: polygon(0 0, 55% 0, 45% 100%, 0% 100%);
   opacity: 0.5;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1040px) {
   .navbar-header {
     float: none;
   }
@@ -243,15 +256,15 @@ body {
 }
 /* owl carousel */
 .owl-prev {
-  left: -85px;
+  left: -5px;
 }
 .owl-next {
-  right: -85px;
+  right: -5px;
 }
 .owl-prev,
 .owl-next {
-  width: 50px;
-  height: 50px;
+  width: 0px;
+  height: 0px;
   top: 25%;
   position: absolute;
   display: block !important;
@@ -271,7 +284,7 @@ body {
 }
 .owl-prev span,
 .owl-next span {
-  font-size: 40px;
+  font-size: 50px;
   height: 100%;
 }
 .owl-prev i,
@@ -285,23 +298,10 @@ body {
     display: none !important;
   }
 }
-
 @media only screen and (max-width: 1360px) {
-  .owl-prev {
-    left: -40px;
-  }
-  .owl-next {
-    right: -40px;
-  }
   .owl-prev,
   .owl-next {
     vertical-align: center;
-    width: 40px;
-    height: 40px;
-  }
-  .owl-prev span,
-  .owl-next span {
-    font-size: 30px;
   }
 }
 .link:hover {

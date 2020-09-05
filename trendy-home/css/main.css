@@ -239,12 +239,27 @@ html {
 .black-color {
   color: #252525 !important;
 }
+#top-nav {
+  transition: all 0.4s ease-in-out;
+}
+body,
+html {
+  height: 100%;
+}
+@media only screen and (max-width: 600px) {
+  #top-nav p {
+    font-size: 1.25rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  #top-nav button {
+    font-size: 1.25rem;
+  }
+}
 .active,
 .carousel,
 .carousel-inner,
-.item,
-body,
-html {
+.item {
   height: 100%;
 }
 .main-color {
@@ -268,7 +283,7 @@ html {
   clip-path: polygon(0 0, 55% 0, 45% 100%, 0 100%);
   opacity: 0.5;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1040px) {
   .navbar-header {
     float: none;
   }
@@ -384,15 +399,15 @@ html {
   }
 }
 .owl-prev {
-  left: -85px;
+  left: -5px;
 }
 .owl-next {
-  right: -85px;
+  right: -5px;
 }
 .owl-next,
 .owl-prev {
-  width: 50px;
-  height: 50px;
+  width: 0;
+  height: 0;
   top: 25%;
   position: absolute;
   display: block !important;
@@ -412,7 +427,7 @@ html {
 }
 .owl-next span,
 .owl-prev span {
-  font-size: 40px;
+  font-size: 50px;
   height: 100%;
 }
 .owl-next i,
@@ -427,21 +442,9 @@ html {
   }
 }
 @media only screen and (max-width: 1360px) {
-  .owl-prev {
-    left: -40px;
-  }
-  .owl-next {
-    right: -40px;
-  }
   .owl-next,
   .owl-prev {
     vertical-align: center;
-    width: 40px;
-    height: 40px;
-  }
-  .owl-next span,
-  .owl-prev span {
-    font-size: 30px;
   }
 }
 .link:hover {
@@ -492,6 +495,9 @@ html {
 .border-gray-700 {
   border-color: #4a5568;
 }
+.border-indigo-400 {
+  border-color: #7f9cf5;
+}
 .hover\:border-gray-400:hover {
   border-color: #cbd5e0;
 }
@@ -529,6 +535,9 @@ html {
 .border {
   border-width: 1px;
 }
+.border-b-4 {
+  border-bottom-width: 4px;
+}
 .border-t {
   border-top-width: 1px;
 }
@@ -562,6 +571,9 @@ html {
 .hidden {
   display: none;
 }
+.flex-row {
+  flex-direction: row;
+}
 .flex-col {
   flex-direction: column;
 }
@@ -574,6 +586,11 @@ html {
 .justify-between {
   justify-content: space-between;
 }
+.font-sans {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
 .font-medium {
   font-weight: 500;
 }
@@ -582,6 +599,9 @@ html {
 }
 .font-bold {
   font-weight: 700;
+}
+.h-0 {
+  height: 0;
 }
 .h-1 {
   height: 0.25rem;
@@ -675,6 +695,9 @@ html {
 .mt-6 {
   margin-top: 1.5rem;
 }
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
 .ml-6 {
   margin-left: 1.5rem;
 }
@@ -693,14 +716,14 @@ html {
 .mb-12 {
   margin-bottom: 3rem;
 }
-.mb-20 {
-  margin-bottom: 5rem;
-}
 .mt-24 {
   margin-top: 6rem;
 }
 .mt-32 {
   margin-top: 8rem;
+}
+.ml-auto {
+  margin-left: auto;
 }
 .focus\:outline-none:focus {
   outline: 0;
@@ -719,6 +742,10 @@ html {
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 .py-4 {
   padding-top: 1rem;
@@ -748,6 +775,10 @@ html {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
+.px-16 {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
 .px-24 {
   padding-left: 6rem;
   padding-right: 6rem;
@@ -766,6 +797,9 @@ html {
 }
 .focus\:shadow-outline:focus {
   box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+}
+.text-black {
+  color: #000;
 }
 .text-white {
   color: #fff;
@@ -799,6 +833,9 @@ html {
 }
 .w-full {
   width: 100%;
+}
+.z-30 {
+  z-index: 30;
 }
 .transform {
   --transform-translate-x: 0;
@@ -875,8 +912,8 @@ html {
   .lg\:text-5xl {
     font-size: 3rem;
   }
-  .lg\:mb-32 {
-    margin-bottom: 8rem;
+  .lg\:mt-48 {
+    margin-top: 12rem;
   }
   .lg\:px-24 {
     padding-left: 6rem;
