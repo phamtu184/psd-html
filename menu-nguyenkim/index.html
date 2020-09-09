@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 16px">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <style>
+    html,
+    body,
+    div,
+    span,
+    applet,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    sub,
+    sup,
+    tt,
+    var,
+    b,
+    u,
+    i,
+    center,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    embed,
+    figure,
+    figcaption,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    output,
+    ruby,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+    }
+    @font-face {
+      font-family: nk-font;
+      src: url(./font/nki-icon-font-home.ttf);
+    }
+    .row-fluid,
+    .ty-wysiwyg-content {
+      width: 100%;
+    }
+    .nk-menu {
+      position: relative;
+      height: 44px;
+      border-bottom: 1px solid #ddd;
+    }
+    .clearfix {
+      clear: both;
+    }
+    .bg-white {
+      background-color: #fff;
+    }
+    .nk-menu .container {
+      position: relative;
+    }
+    .nk-menu #nk-danh-muc-san-pham-left {
+      width: 256px;
+      float: left;
+      cursor: pointer;
+    }
+    .nk-menu #nk-danh-muc-san-pham-left > h3 {
+      background-color: #413b49;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 10px 0;
+      color: #fff;
+    }
+    .nk-menu #nk-danh-muc-san-pham-left > h3 i,
+    .nk-menu #nk-danh-muc-san-pham-left > h3 b {
+      display: table-cell;
+      vertical-align: middle;
+    }
+    .nk-menu #nk-danh-muc-san-pham-left > h3 i {
+      padding: 0 12px;
+      font-size: 24px;
+    }
+    .nk-menu i {
+      display: block;
+    }
+    [class^="nki-"],
+    [class*="nki-"] {
+      font-family: "nk-font" !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .nk-menu #nk-danh-muc-san-pham-left > h3 {
+      background-color: #413b49;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 10px 0;
+      color: #fff;
+    }
+    .nk-menu #nk-danh-muc-san-pham-left {
+      width: 256px;
+      float: left;
+      cursor: pointer;
+    }
+    .nki-menu:before {
+      content: "\e925";
+    }
+    .nk-menu #nk-danh-muc-san-pham-left.nk-danh-muc-trang-chu > ul {
+      display: block;
+    }
+    .nk-menu #nk-danh-muc-san-pham-left > ul {
+      display: none;
+      background-color: #fff;
+      position: absolute;
+      width: 256px;
+      z-index: 10;
+      height: 384px;
+      border-bottom-right-radius: 4px;
+      border-bottom-left-radius: 3px;
+    }
+    ol,
+    ul {
+      list-style: none;
+    }
+    .nk-menu #nk-danh-muc-san-pham-left > ul li {
+      height: 32px;
+      display: flex;
+      display: -webkit-flex;
+      align-items: center;
+    }
+    .nk-menu #nk-danh-muc-san-pham-left > ul > li {
+      border-top: 1px solid #dcdee3;
+      margin: 0 5px;
+    }
+    .nk-menu #nk-danh-muc-san-pham-left > ul li .menu-item {
+      display: flex;
+      display: -webkit-flex;
+      align-items: center;
+    }
+    .nk-menu #nk-danh-muc-san-pham-left > ul li .icon {
+      width: 32px;
+    }
+    .nk-menu #nk-danh-muc-san-pham-left > ul li .menu-item.hide_arrow::after {
+      display: none;
+    }
+    .nk-menu #nk-danh-muc-san-pham-left > ul li p a {
+      font-size: 13px;
+      color: #3f3f3f;
+    }
+    .nk-menu #nk-danh-muc-san-pham-left > ul li .menu-item::after {
+      content: "\e90e";
+      font-family: "nk-font" !important;
+      color: #a6a6a6;
+      font-size: 10px;
+      position: absolute;
+      right: 8px;
+      margin: 1px 0 0 0;
+    }
+    .nk-menu #nk-danh-muc-san-pham-left > ul li .icon i {
+      margin: 0 auto;
+      display: block;
+      font-size: 20px;
+      text-align: center;
+      color: #a6a6a6;
+    }
+    [class^="nki-"],
+    [class*="nki-"] {
+      font-family: "nk-font" !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .nk-menu #nk-danh-muc-san-pham-left > ul li p a {
+      font-size: 13px;
+      color: #3f3f3f;
+    }
+    a {
+      text-decoration: none;
+    }
+    .nk-menu #nk-danh-muc-san-pham-left > ul li p a:first-child::before {
+      display: none;
+    }
+    .nk-menu #nk-danh-muc-san-pham-left > ul li p a::before {
+      content: "-";
+      padding: 0 4px;
+    }
+    .nk-menu #nk-danh-muc-san-pham-left > ul li p a:hover {
+      text-decoration: none;
+      color: red;
+    }
+    .nk-menu #nk-danh-muc-san-pham-left > ul li p a::before {
+      content: "-";
+      padding: 0 4px;
+    }
+    .nki-menu-fridge:before {
+      content: "\e901";
+      color: #a6a6a6;
+    }
+    [class^="nki-"],
+    [class*="nki-"] {
+      font-family: "nk-font" !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .nk-menu #nk-danh-muc-san-pham-left .sub-menu {
+      position: absolute;
+      z-index: 11;
+      height: 384px;
+      top: 0;
+      left: 256px;
+      display: none;
+    }
+    .children_sort,
+    .style-tin-tuc {
+      width: 707px;
+      background: #fff;
+    }
+    @media (max-width: 1179px) {
+      .nk-menu #nk-danh-muc-san-pham-left .sub-menu .item.row2 {
+        width: 150px;
+      }
+    }
+    .nk-menu #nk-danh-muc-san-pham-left .sub-menu .item.row2 {
+      float: left;
+      padding: 14px 20px;
+      height: 384px;
+      width: 176px;
+    }
+    .nk-menu
+      #nk-danh-muc-san-pham-left
+      .sub-menu
+      .item.row2
+      .links:nth-child(1) {
+      border-bottom: 1px solid #e3e3e3;
+    }
+    .nk-menu #nk-danh-muc-san-pham-left .sub-menu .item.row2 .links h3 {
+      font-weight: 600;
+      font-size: 14px;
+      color: #000;
+      margin: 0 0 16px 0;
+    }
+    .nk-menu #nk-danh-muc-san-pham-left .sub-menu .item.row2 .links .a-links {
+      font-size: 14px;
+      color: #4a4a4a;
+      display: block;
+      position: relative;
+      width: 125px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    .nk-menu #nk-danh-muc-san-pham-left .sub-menu .item.row2 .links h3 a {
+      font-weight: 600;
+      font-size: 14px;
+      margin: 0 0 16px 0;
+      color: #000;
+    }
+    .nk-menu #nk-danh-muc-san-pham-left .sub-menu .item.row2 .links h3 {
+      font-weight: 600;
+      font-size: 14px;
+      color: #000;
+      margin: 0 0 16px 0;
+    }
+    .nk-menu
+      #nk-danh-muc-san-pham-left
+      .sub-menu
+      .item.row2
+      .links
+      .a-links
+      span.nk-sticker {
+      font-size: 16px;
+      margin: 0 0 0 6px;
+      position: absolute;
+      top: -2px;
+    }
+    .nk-menu #nk-danh-muc-san-pham-left .sub-menu .item.row2 .links h3 span {
+      margin: 0 0 16px 0;
+    }
+    .nk-menu
+      #nk-danh-muc-san-pham-left
+      .sub-menu
+      .item.row2
+      .links
+      .a-links
+      span.nk-sticker
+      span.path1,
+    .nk-menu
+      #nk-danh-muc-san-pham-left
+      .sub-menu
+      .item.row2
+      .links
+      .a-links
+      span.nk-sticker
+      span.path2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .nk-menu #nk-danh-muc-san-pham-left .sub-menu .item.row2 .links h3 span {
+      margin: 0 0 16px 0;
+    }
+    .bg-white {
+      background-color: #fff;
+    }
+    .bg-gray {
+      background-color: #fbfbfb;
+    }
+    .nk-menu #nk-danh-muc-san-pham-left .sub-menu .item.row2 .links ul li {
+      border-left: none;
+      width: 100%;
+      display: table;
+      height: 26px;
+    }
+    .nk-menu #nk-danh-muc-san-pham-left > ul li {
+      height: 32px;
+      display: flex;
+      display: -webkit-flex;
+      align-items: center;
+    }
+    .nk-menu
+      #nk-danh-muc-san-pham-left
+      .sub-menu
+      .item.row2
+      .links
+      .js_hidden_link {
+      font-size: 14px;
+      color: #4a4a4a;
+      display: block;
+      position: relative;
+      width: 125px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      text-transform: capitalize;
+    }
+    .nk-menu
+      #nk-danh-muc-san-pham-left
+      .sub-menu
+      .item.row2
+      .links
+      .js_hidden_link
+      .nki-sort-next {
+      font-size: 8px;
+      color: #f86666;
+      margin-left: -2px;
+      margin-right: 3px;
+    }
+    .inline-block {
+      display: inline-block !important;
+    }
+    .nki-menu-television:before {
+      content: "\e900";
+      color: #a6a6a6;
+    }
+    .nk-menu
+      #nk-danh-muc-san-pham-left
+      .sub-menu
+      .item.row2
+      .links
+      .a-links
+      .nki-sort-next {
+      font-size: 8px;
+      color: #f86666;
+      margin-left: -2px;
+      margin-right: 3px;
+    }
+    .nki-sort-next:before {
+      content: "\e93d";
+    }
+    .nk-menu
+      #nk-danh-muc-san-pham-left
+      .sub-menu
+      .item.row2
+      .links:nth-child(2) {
+      margin: 16px 0 0 0;
+    }
+  </style>
+  <body class="font-sans">
+    <div class="span16 nk-menu bg-white clearfix">
+      <div class="container">
+        <div class="row">
+          <div id="nk-danh-muc-san-pham-left" class="nk-danh-muc-trang-chu">
+            <h3>
+              <i class="nki-menu"></i>
+              <b>Danh mục sản phẩm</b>
+            </h3>
+            <ul id="container-menu">
+              <li>
+                <div class="menu-item hide_arrow">
+                  <div class="icon">
+                    <img
+                      src="./image/gift-2x-red.png"
+                      style="width: 20px; margin-left: 4px"
+                    />
+                  </div>
+                  <p>
+                    <a href="#">Tổng hợp khuyến mãi</a>
+                  </p>
+                </div>
+              </li>
+              <li id="has-submenu" data-submenu="1">
+                <div class="menu-item">
+                  <div class="icon">
+                    <i class="nki-menu-fridge"></i>
+                  </div>
+                  <p>
+                    <a href="#">Tủ lạnh</a>
+                    <a href="#">Tủ đông</a>
+                    <a href="#">Tủ mát</a>
+                  </p>
+                </div>
+                <div class="sub-menu tu-lanh-tu-dong" id="submenu1">
+                  <div class="menu-tulanh children_sort">
+                    <div class="item row2 bg-white">
+                      <div class="links">
+                        <h3>
+                          <a href="#" class="a-link"
+                            >Tủ lạnh<span class="nk-sticker"
+                              ><span class="path1"></span
+                              ><span class="path2"></span></span
+                          ></a>
+                        </h3>
+                      </div>
+                      <div class="links">
+                        <h3>
+                          <a href="#" class="a-link"
+                            >thương hiệu<span class="nk-sticker"
+                              ><span class="path1"></span
+                              ><span class="path2"></span></span
+                          ></a>
+                        </h3>
+                        <ul>
+                          <li>
+                            <p class="js_hidden_link">
+                              <span class="nki-sort-next">
+                                <span class="path1"></span>
+                                <span class="path2"></span>
+                              </span>
+                              samsung
+                            </p>
+                          </li>
+                          <li>
+                            <p class="js_hidden_link">
+                              <span class="nki-sort-next">
+                                <span class="path1"></span>
+                                <span class="path2"></span>
+                              </span>
+                              sharp
+                            </p>
+                          </li>
+                          <li>
+                            <p class="js_hidden_link">
+                              <span class="nki-sort-next">
+                                <span class="path1"></span>
+                                <span class="path2"></span>
+                              </span>
+                              panasonic
+                            </p>
+                          </li>
+                          <li>
+                            <p class="js_hidden_link">
+                              <span class="nki-sort-next">
+                                <span class="path1"></span>
+                                <span class="path2"></span>
+                              </span>
+                              toshiba
+                            </p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="item row2 bg-gray">
+                      <div class="links">
+                        <h3>
+                          <a href="#" class="a-link"
+                            >Loại Tủ lạnh<span class="nk-sticker"
+                              ><span class="path1"></span
+                              ><span class="path2"></span></span
+                          ></a>
+                        </h3>
+                        <ul>
+                          <li>
+                            <p class="js_hidden_link">
+                              <span class="nki-sort-next">
+                                <span class="path1"></span>
+                                <span class="path2"></span>
+                              </span>
+                              Multi doors
+                            </p>
+                          </li>
+                          <li>
+                            <p class="js_hidden_link">
+                              <span class="nki-sort-next">
+                                <span class="path1"></span>
+                                <span class="path2"></span>
+                              </span>
+                              Multi doors
+                            </p>
+                          </li>
+                          <li>
+                            <p class="js_hidden_link">
+                              <span class="nki-sort-next">
+                                <span class="path1"></span>
+                                <span class="path2"></span>
+                              </span>
+                              Multi doors
+                            </p>
+                          </li>
+                          <li>
+                            <p class="js_hidden_link">
+                              <span class="nki-sort-next">
+                                <span class="path1"></span>
+                                <span class="path2"></span>
+                              </span>
+                              Multi doors
+                            </p>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="links">
+                        <h3>
+                          <a href="#" class="a-link"
+                            >Loại Tủ lạnh<span class="nk-sticker"
+                              ><span class="path1"></span
+                              ><span class="path2"></span></span
+                          ></a>
+                        </h3>
+                        <ul>
+                          <li>
+                            <p class="js_hidden_link">
+                              <span class="nki-sort-next">
+                                <span class="path1"></span>
+                                <span class="path2"></span>
+                              </span>
+                              Multi doors
+                            </p>
+                          </li>
+                          <li>
+                            <p class="js_hidden_link">
+                              <span class="nki-sort-next">
+                                <span class="path1"></span>
+                                <span class="path2"></span>
+                              </span>
+                              Multi doors
+                            </p>
+                          </li>
+                          <li>
+                            <p class="js_hidden_link">
+                              <span class="nki-sort-next">
+                                <span class="path1"></span>
+                                <span class="path2"></span>
+                              </span>
+                              Multi doors
+                            </p>
+                          </li>
+                          <li>
+                            <p class="js_hidden_link">
+                              <span class="nki-sort-next">
+                                <span class="path1"></span>
+                                <span class="path2"></span>
+                              </span>
+                              Multi doors
+                            </p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li id="has-submenu" data-submenu="2">
+                <div class="menu-item">
+                  <div class="icon">
+                    <i class="nki-menu-television"></i>
+                  </div>
+
+                  <p>
+                    <a href="#">Tivi</a>
+                    <a href="#">Loa</a>
+                    <a href="#">Âm thanh</a>
+                  </p>
+                </div>
+                <div class="sub-menu tu-lanh-tu-dong" id="submenu2">
+                  <div class="menu-tulanh children_sort">
+                    <div class="item row2 bg-white">
+                      <div class="links">
+                        <h3>
+                          <a href="#" class="a-link"
+                            >Tủ lạnh 2<span class="nk-sticker"
+                              ><span class="path1"></span
+                              ><span class="path2"></span></span
+                          ></a>
+                        </h3>
+                      </div>
+                      <div class="links">
+                        <h3>
+                          <a href="#" class="a-link"
+                            >Loại Tủ lạnh<span class="nk-sticker"
+                              ><span class="path1"></span
+                              ><span class="path2"></span></span
+                          ></a>
+                        </h3>
+                        <ul>
+                          <li>
+                            <p class="js_hidden_link">
+                              <span class="nki-sort-next">
+                                <span class="path1"></span>
+                                <span class="path2"></span>
+                              </span>
+                              Multi doors
+                            </p>
+                          </li>
+                          <li>
+                            <p class="js_hidden_link">
+                              <span class="nki-sort-next">
+                                <span class="path1"></span>
+                                <span class="path2"></span>
+                              </span>
+                              Multi doors
+                            </p>
+                          </li>
+                          <li>
+                            <p class="js_hidden_link">
+                              <span class="nki-sort-next">
+                                <span class="path1"></span>
+                                <span class="path2"></span>
+                              </span>
+                              Multi doors
+                            </p>
+                          </li>
+                          <li>
+                            <p class="js_hidden_link">
+                              <span class="nki-sort-next">
+                                <span class="path1"></span>
+                                <span class="path2"></span>
+                              </span>
+                              Multi doors
+                            </p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="item row2 bg-gray">
+                      <div class="links">
+                        <h3>
+                          <a href="#" class="a-link"
+                            >Loại Tủ lạnh<span class="nk-sticker"
+                              ><span class="path1"></span
+                              ><span class="path2"></span></span
+                          ></a>
+                        </h3>
+                        <ul>
+                          <li>
+                            <p class="js_hidden_link">
+                              <span class="nki-sort-next">
+                                <span class="path1"></span>
+                                <span class="path2"></span>
+                              </span>
+                              Multi doors
+                            </p>
+                          </li>
+                          <li>
+                            <p class="js_hidden_link">
+                              <span class="nki-sort-next">
+                                <span class="path1"></span>
+                                <span class="path2"></span>
+                              </span>
+                              Multi doors
+                            </p>
+                          </li>
+                          <li>
+                            <p class="js_hidden_link">
+                              <span class="nki-sort-next">
+                                <span class="path1"></span>
+                                <span class="path2"></span>
+                              </span>
+                              Multi doors
+                            </p>
+                          </li>
+                          <li>
+                            <p class="js_hidden_link">
+                              <span class="nki-sort-next">
+                                <span class="path1"></span>
+                                <span class="path2"></span>
+                              </span>
+                              Multi doors
+                            </p>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="links">
+                        <h3>
+                          <a href="#" class="a-link"
+                            >Loại Tủ lạnh<span class="nk-sticker"
+                              ><span class="path1"></span
+                              ><span class="path2"></span></span
+                          ></a>
+                        </h3>
+                        <ul>
+                          <li>
+                            <p class="js_hidden_link">
+                              <span class="nki-sort-next">
+                                <span class="path1"></span>
+                                <span class="path2"></span>
+                              </span>
+                              Multi doors
+                            </p>
+                          </li>
+                          <li>
+                            <p class="js_hidden_link">
+                              <span class="nki-sort-next">
+                                <span class="path1"></span>
+                                <span class="path2"></span>
+                              </span>
+                              Multi doors
+                            </p>
+                          </li>
+                          <li>
+                            <p class="js_hidden_link">
+                              <span class="nki-sort-next">
+                                <span class="path1"></span>
+                                <span class="path2"></span>
+                              </span>
+                              Multi doors
+                            </p>
+                          </li>
+                          <li>
+                            <p class="js_hidden_link">
+                              <span class="nki-sort-next">
+                                <span class="path1"></span>
+                                <span class="path2"></span>
+                              </span>
+                              Multi doors
+                            </p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("li[data-submenu]").mouseover(function (event) {
+        var idNumber = $(this).data("submenu");
+        $("*").removeClass("inline-block");
+        $("#submenu" + idNumber).addClass("inline-block");
+      });
+      $(".sub-menu, #container-menu").mouseleave(function (event) {
+        $(".sub-menu").removeClass("inline-block");
+      });
+    });
+  </script>
+</html>
