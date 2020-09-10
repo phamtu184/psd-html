@@ -3918,7 +3918,9 @@
     var loc = window.location.pathname.split('/');
     var dir = loc[loc.length-1];
     $(document).ready(function () {
+      
       if ( dir !=="" && dir !== 'index.html' && $(window).width() > 800){
+        console.log(dir)
         $('.nk-menu .container').addClass('relative');
         $('.nk-menu #nk-danh-muc-san-pham-left #container-menu').addClass('absolute, d-none');
         $('#nk-danh-muc-san-pham-left').hover(()=>{
